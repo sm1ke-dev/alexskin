@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Tilda Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./TildaSans-Regular.woff") format("woff"),
+    url("./TildaSans-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Tilda Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./TildaSans-Medium.woff") format("woff"),
+    url("./TildaSans-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Tilda Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./TildaSans-Bold.woff") format("woff"),
+    url("./TildaSans-Bold.woff2") format("woff2");
+}

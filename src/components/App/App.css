@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+}
+
+.page {
+  max-width: 1440px;
+  min-width: 390px;
+  margin: 0 auto;
+  padding: 0 70px;
+  font-family: "Tilda Sans", Arial, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
