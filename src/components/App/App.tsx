@@ -9,10 +9,12 @@ import Service from "../Service/Service";
 import Faq from "../Faq/Faq";
 import Partnership from "../Partnership/Partnership";
 import Documents from "../Documents/Documents";
+import Header from "../Header/Header";
 
 function App() {
   return (
     <div className="page">
+      <Header />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/about" element={<About />} />

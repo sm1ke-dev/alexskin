@@ -1,0 +1,129 @@
+.header {
+  background-color: #f7f7f9;
+  max-width: 1440px;
+  height: 86px;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.header__wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex: 0 1 1170px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__burger {
+  box-sizing: content-box;
+  padding: 10px;
+  display: none;
+  flex: 0 0 22px;
+  height: 22px;
+}
+
+.header__logo {
+  width: 136px;
+  height: 28px;
+}
+
+.menu-list,
+.icons-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.menu-list {
+  gap: 3.05vw;
+  margin-right: 1.8vw;
+}
+
+.icons-list {
+  gap: 24px;
+}
+
+.menu-list__link {
+  text-transform: uppercase;
+  font-size: 13px;
+  text-decoration: none;
+  color: initial;
+}
+
+.icons-list__item {
+  display: flex;
+  align-items: center;
+}
+
+.icons-list__icon {
+  width: 22px;
+  height: 22px;
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    padding: 0 30px;
+  }
+
+  .menu-list {
+    gap: 2.5vw;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .header__logo {
+    width: 114px;
+    height: 24px;
+  }
+
+  .menu-list {
+    gap: 1.5vw;
+  }
+
+  .icons-list {
+    gap: 17px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 0 40px 0 30px;
+    height: 70px;
+  }
+
+  .header__wrapper {
+    justify-content: space-between;
+  }
+
+  .header__burger {
+    display: block;
+  }
+
+  .header__logo {
+    position: relative;
+    left: 31px;
+  }
+
+  .menu-list {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 0 15px 0 5px;
+    height: 60px;
+  }
+
+  .icons-list {
+    gap: 14px;
+  }
+}
