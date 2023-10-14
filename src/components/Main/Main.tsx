@@ -1,11 +1,12 @@
 import React from "react";
+import Slogan from "../Slogan/Slogan";
 import "./Main.css";
 
 const Main: React.FC = () => {
   return (
-    <div className="main">
-      {/* <h1 className="main__header">Любить. Ценить. Беречь себя.</h1> */}
-    </div>
+    <main className="main">
+      <Slogan />
+    </main>
   );
 };
 
