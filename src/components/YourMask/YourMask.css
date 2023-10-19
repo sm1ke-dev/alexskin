@@ -1,0 +1,52 @@
+.your-mask {
+  padding: 80px 50px;
+}
+
+.your-mask__title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  max-width: 833px;
+  margin: 0 auto 40px;
+}
+
+@media screen and (max-width: 1270px) {
+  .your-mask {
+    padding-top: 6.3vw;
+    padding-bottom: 6.3vw;
+  }
+
+  .your-mask__title {
+    font-size: 3.94vw;
+    max-width: 65.59vw;
+    margin-bottom: 3.15vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .your-mask {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .your-mask {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .your-mask {
+    padding: 8vw 15px 8.97vw;
+  }
+
+  .your-mask__title {
+    font-size: 20px;
+    max-width: 400px;
+    margin-bottom: 5.13vw;
+  }
+}
