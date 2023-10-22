@@ -10,6 +10,7 @@ import Faq from "../Faq/Faq";
 import Partnership from "../Partnership/Partnership";
 import Documents from "../Documents/Documents";
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/partnership" element={<Partnership />} />
         <Route path="/documents" element={<Documents />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
