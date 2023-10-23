@@ -26,7 +26,7 @@ function App() {
         <Route path="/partnership" element={<Partnership />} />
         <Route path="/documents" element={<Documents />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
