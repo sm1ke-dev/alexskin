@@ -1,7 +1,15 @@
 import React from "react";
+import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
+import Video from "../Video/Video";
+import "./About.css";
 
 const About: React.FC = () => {
-  return <div>About</div>;
+  return (
+    <main className="about">
+      <Breadcrumbs />
+      <Video />
+    </main>
+  );
 };
 
 export default About;
