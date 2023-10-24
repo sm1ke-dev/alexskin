@@ -2,11 +2,15 @@ import React from "react";
 import "./MainCatalog.css";
 import Item from "../Item/Item";
 
-const MainCatalog = () => {
+type MainCatalogProps = {
+  page: string;
+};
+
+const MainCatalog: React.FC<MainCatalogProps> = ({ page }) => {
   return (
-    <section className="main-catalog">
-      <h2 className="main-catalog__title">Каталог</h2>
-      <ul className="main-catalog__items">
+    <section className={`catalog-list ${page}__catalog-list`}>
+      <h2 className="catalog-list__title">Каталог</h2>
+      <ul className="catalog-list__items">
         <Item />
         <Item />
         <Item />

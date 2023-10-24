@@ -1,10 +1,9 @@
-.main-catalog {
-  margin-top: 80px;
+.catalog-list {
   padding: 0 50px;
   margin-bottom: 80px;
 }
 
-.main-catalog__title {
+.catalog-list__title {
   text-align: center;
   font-size: 50px;
   font-weight: 400;
@@ -13,7 +12,7 @@
   margin-bottom: 40px;
 }
 
-.main-catalog__items {
+.catalog-list__items {
   padding: 0;
   list-style: none;
   display: flex;
@@ -23,34 +22,30 @@
 }
 
 @media screen and (max-width: 1440px) {
-  .main-catalog {
-    margin-top: 5.56vw;
-  }
-
-  .main-catalog__title {
+  .catalog-list__title {
     font-size: 3.473vw;
     margin-bottom: 2.78vw;
   }
 
-  .main-catalog__items {
+  .catalog-list__items {
     gap: 2.08vw;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .main-catalog {
+  .catalog-list {
     padding: 0 30px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .main-catalog {
+  .catalog-list {
     padding: 0 40px;
   }
 }
 
 @media screen and (max-width: 728px) {
-  .main-catalog__items {
+  .catalog-list__items {
     overflow: scroll;
     justify-content: start;
     gap: 15px;
@@ -58,18 +53,18 @@
 }
 
 @media screen and (max-width: 580px) {
-  .main-catalog {
-    margin-top: 35px;
+  .catalog-list {
+    margin-bottom: 35px;
   }
 
-  .main-catalog__title {
+  .catalog-list__title {
     font-size: 20px;
     margin-bottom: 20px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .main-catalog {
+  .catalog-list {
     padding: 0 15px;
   }
 }

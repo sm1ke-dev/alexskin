@@ -1,5 +1,6 @@
 .slogan {
   margin-top: 50px;
+  margin-bottom: 80px;
 }
 
 .slogan__title {
@@ -23,6 +24,7 @@
 @media screen and (max-width: 1440px) {
   .slogan {
     margin-top: 3.473vw;
+    margin-bottom: 5.56vw;
   }
 
   .slogan__title {
@@ -38,6 +40,10 @@
 }
 
 @media screen and (max-width: 580px) {
+  .slogan {
+    margin-bottom: 35px;
+  }
+
   .slogan__title {
     font-size: 20px;
   }

@@ -11,7 +11,7 @@ const Main: React.FC = () => {
   return (
     <main className="main">
       <Slogan />
-      <MainCatalog />
+      <MainCatalog page="main" />
       <MainAbout />
       <Features />
       <YourMask />
