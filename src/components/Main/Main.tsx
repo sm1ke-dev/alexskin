@@ -1,5 +1,5 @@
 import React from "react";
-import Features from "../Featrures/Features";
+import Features from "../Features/Features";
 import MainAbout from "../MainAbout/MainAbout";
 import MainCatalog from "../MainCatalog/MainCatalog";
 import MainCommunity from "../MainCommunity/MainCommunity";

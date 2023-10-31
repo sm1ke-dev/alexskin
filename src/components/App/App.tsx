@@ -11,6 +11,7 @@ import Partnership from "../Partnership/Partnership";
 import Documents from "../Documents/Documents";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import Product from "../Product/Product";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<Main />} />
         <Route path="/about" element={<About />} />
         <Route path="/catalog" element={<Catalog />} />
+        <Route path="/catalog/:itemId" element={<Product />} />
         <Route path="/community" element={<Community />} />
         <Route path="/service" element={<Service />} />
         <Route path="/faq" element={<Faq />} />
