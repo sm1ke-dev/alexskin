@@ -1,0 +1,151 @@
+.usage {
+  padding: 80px 50px;
+}
+
+.usage__title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.usage__list {
+  position: relative;
+  margin-top: 75px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 8.46vw;
+}
+
+.usage__top-arrow {
+  position: absolute;
+  top: -19px;
+  left: 237px;
+}
+
+.usage__bottom-arrow {
+  position: absolute;
+  bottom: -20px;
+  left: 638px;
+}
+
+.usage__item {
+  flex: 0 0 370px;
+  display: flex;
+}
+
+.usage__pic-wrapper {
+  margin-right: 20px;
+  flex: 0 0 142px;
+  height: 142px;
+  position: relative;
+}
+
+.usage__face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.usage__num-wrapper {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -13px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.usage__num-vector {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.usage__num {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.usage__text {
+  margin-top: 28px;
+  flex: 0 0 208px;
+  color: #787f8b;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+@media screen and (max-width: 1440px) {
+  .usage__top-arrow {
+    left: 16.46vw;
+  }
+
+  .usage__bottom-arrow {
+    left: 44.31vw;
+  }
+}
+
+@media screen and (max-width: 1269px) {
+  .usage__top-arrow,
+  .usage__bottom-arrow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .usage {
+    padding: 8vw 30px;
+  }
+
+  .usage__title {
+    font-size: 5.13vw;
+  }
+
+  .usage__list {
+    margin-top: 7.5vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .usage {
+    padding: 8vw 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .usage {
+    padding: 35px 15px;
+  }
+
+  .usage__list {
+    margin-top: 33px;
+  }
+
+  .usage__item {
+    flex: 0 0 360px;
+    align-items: center;
+  }
+
+  .usage__text {
+    margin-top: 0;
+    flex: 0 0 197px;
+    font-size: 14px;
+    line-height: 120%;
+  }
+}
