@@ -5,7 +5,7 @@ import "./Other.css";
 const Other = () => {
   return (
     <section className="other">
-      <MainCatalog page={"product"} />
+      <MainCatalog page="product" title="Другие продукты" />
     </section>
   );
 };
