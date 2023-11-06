@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import Composition from "../Composition/Composition";
 import HowItWorks from "../HowItWorks/HowItWorks";
 import Ingredients from "../Ingredients/Ingredients";
 import ProductGrid from "../ProductGrid/ProductGrid";
@@ -15,6 +16,7 @@ const Product = () => {
       <HowItWorks />
       <Usage />
       <Ingredients />
+      <Composition />
     </main>
   );
 };
