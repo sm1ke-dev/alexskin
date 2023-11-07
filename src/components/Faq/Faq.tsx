@@ -6,7 +6,7 @@ import FaqQuestion from "../FaqQuestion/FaqQuestion";
 const Faq = () => {
   return (
     <main className="faq">
-      <Breadcrumbs />
+      <Breadcrumbs page="Часто задаваемые вопросы" urlPath="faq" />
       <h2 className="faq__title">Часто задаваемые вопросы</h2>
       <ul className="faq__list">
         <hr className="faq__line" />

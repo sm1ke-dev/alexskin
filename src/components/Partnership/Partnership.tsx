@@ -5,7 +5,7 @@ import "./Partnership.css";
 const Partnership = () => {
   return (
     <main className="partner">
-      <Breadcrumbs />
+      <Breadcrumbs page="Сотрудничество" urlPath="partner" />
       <h2 className="partner__title">Сотрудничество</h2>
       <ul className="partner__grid">
         <li className="partner-item">

@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Community = () => {
   return (
     <main className="community">
-      <Breadcrumbs />
+      <Breadcrumbs page="Коммьюнити" urlPath="community" />
       <div className="community__wrapper">
         <h2 className="community__title">Коммьюнити</h2>
         <p className="community__subtitle">

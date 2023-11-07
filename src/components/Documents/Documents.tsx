@@ -6,7 +6,7 @@ import doc from "../../images/document.png";
 const Documents = () => {
   return (
     <main className="docs">
-      <Breadcrumbs />
+      <Breadcrumbs page="Документы" urlPath="docs" />
       <h2 className="docs__title">Документы</h2>
       <div className="docs__wrapper">
         <h3 className="docs__name">Декларация соответствия</h3>

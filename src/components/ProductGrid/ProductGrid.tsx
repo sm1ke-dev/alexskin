@@ -68,7 +68,7 @@ const ProductGrid = () => {
         </button>
       </div>
       <div className="product-grid__description-wrapper">
-        <Breadcrumbs />
+        <Breadcrumbs page="Morning Masque" />
         <h2 className="product-grid__title">Morning Masque</h2>
         <div className="product-grid__price-wrapper">
           <p className="product-grid__price">2500 р.</p>

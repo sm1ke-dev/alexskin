@@ -8,7 +8,7 @@ import Expert from "../Expert/Expert";
 const Catalog = () => {
   return (
     <main className="catalog">
-      <Breadcrumbs />
+      <Breadcrumbs page="Каталог" urlPath="catalog" />
       <MainCatalog page="catalog" />
       <Discount />
       <Expert />

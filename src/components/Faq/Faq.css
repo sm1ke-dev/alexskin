@@ -2,6 +2,10 @@
   margin-top: 15px;
 }
 
+.faq__breadcrumbs {
+  padding: 0 50px;
+}
+
 .faq__title {
   margin-top: 20px;
   text-align: center;
@@ -69,6 +73,10 @@
 }
 
 @media screen and (max-width: 1000px) {
+  .faq__breadcrumbs {
+    padding: 0 30px;
+  }
+
   .faq__title {
     font-size: 5.13vw;
   }
@@ -85,6 +93,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .faq__breadcrumbs {
+    padding: 0 40px;
+  }
+
   .faq__list {
     padding: 0 40px;
   }
@@ -95,6 +107,10 @@
 }
 
 @media screen and (max-width: 480px) {
+  .faq__breadcrumbs {
+    padding: 0 15px;
+  }
+
   .faq__list {
     padding: 0 15px;
   }

@@ -1,11 +1,11 @@
 .grid {
   background-color: #fff;
-  max-width: 1170px;
-  margin: 80px auto;
+  padding: 80px 50px;
 }
 
 .grid__wrapper {
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(2, minmax(min-content, 570px));
   grid-template-rows: repeat(5, minmax(min-content, 280px));
   column-gap: 30px;
@@ -128,9 +128,15 @@
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .grid {
+    padding: 80px 30px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .grid {
-    margin: 8.97vw auto;
+    padding: 8.97vw 40px;
   }
 
   .grid__wrapper {
@@ -188,6 +194,12 @@
   .grid__pic-cell {
     margin-bottom: 3.85vw;
     height: 43.4vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .grid {
+    padding: 8.97vw 15px;
   }
 }
 

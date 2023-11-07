@@ -7,6 +7,10 @@
   padding: 0 50px;
 }
 
+.header_white {
+  background-color: #fff;
+}
+
 .header__wrapper {
   margin: 0 auto;
   display: flex;

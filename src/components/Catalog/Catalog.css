@@ -5,3 +5,25 @@
 .catalog__catalog-list {
   margin-top: 20px;
 }
+
+.catalog__breadcrumbs {
+  padding: 0 50px;
+}
+
+@media screen and (max-width: 1000px) {
+  .catalog__breadcrumbs {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .catalog__breadcrumbs {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .catalog__breadcrumbs {
+    padding: 0 15px;
+  }
+}

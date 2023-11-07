@@ -3,6 +3,10 @@
   overflow: hidden;
 }
 
+.community__breadcrumbs {
+  padding: 0 50px;
+}
+
 .community__wrapper {
   padding: 0 50px;
 }
@@ -117,6 +121,10 @@
 }
 
 @media screen and (max-width: 1000px) {
+  .community__breadcrumbs {
+    padding: 0 30px;
+  }
+
   .community__wrapper {
     padding: 0 30px;
   }
@@ -138,6 +146,10 @@
 @media screen and (max-width: 768px) {
   .community {
     margin-top: 10px;
+  }
+
+  .community__breadcrumbs {
+    padding: 0 40px;
   }
 
   .community__wrapper {
@@ -185,6 +197,10 @@
 }
 
 @media screen and (max-width: 480px) {
+  .community__breadcrumbs {
+    padding: 0 15px;
+  }
+
   .community__wrapper {
     padding: 0 15px;
   }

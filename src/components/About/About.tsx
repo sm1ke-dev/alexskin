@@ -7,7 +7,7 @@ import "./About.css";
 const About: React.FC = () => {
   return (
     <main className="about">
-      <Breadcrumbs />
+      <Breadcrumbs page="О бренде" urlPath="about" />
       <Video />
       <AboutGrid />
     </main>

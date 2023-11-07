@@ -5,7 +5,6 @@ import cart from "../../images/cart-icon.svg";
 
 const Item = () => {
   const [isHovered, setIsHovered] = React.useState(false);
-  console.log(isHovered);
 
   return (
     <li className="item">

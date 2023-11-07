@@ -2,6 +2,10 @@
   margin-top: 15px;
 }
 
+.service__breadcrumbs {
+  padding: 0 50px;
+}
+
 .service__wrapper {
   padding: 0 50px;
   margin-top: 20px;
@@ -123,6 +127,10 @@
 }
 
 @media screen and (max-width: 1000px) {
+  .service__breadcrumbs {
+    padding: 0 30px;
+  }
+
   .service__wrapper {
     padding: 0 30px;
   }
@@ -135,6 +143,10 @@
 @media screen and (max-width: 768px) {
   .service {
     margin-top: 10px;
+  }
+
+  .service__breadcrumbs {
+    padding: 0 40px;
   }
 
   .service__wrapper {
@@ -227,6 +239,10 @@
 }
 
 @media screen and (max-width: 480px) {
+  .service__breadcrumbs {
+    padding: 0 15px;
+  }
+
   .service__wrapper {
     padding: 0 15px;
     margin-top: 24px;

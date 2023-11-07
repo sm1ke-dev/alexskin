@@ -2,6 +2,10 @@
   margin: 15px 0 80px;
 }
 
+.partner__breadcrumbs {
+  padding: 0 50px;
+}
+
 .partner__title {
   margin: 24px 0 40px;
   text-align: center;
@@ -50,6 +54,10 @@
     margin-bottom: 8vw;
   }
 
+  .partner__breadcrumbs {
+    padding: 0 30px;
+  }
+
   .partner__title {
     font-size: 5.13vw;
   }
@@ -60,6 +68,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .partner__breadcrumbs {
+    padding: 0 40px;
+  }
+
   .partner__title {
     margin-bottom: 5.13vw;
   }
@@ -78,6 +90,10 @@
 @media screen and (max-width: 480px) {
   .partner {
     margin: 10px 0 38px;
+  }
+
+  .partner__breadcrumbs {
+    padding: 0 15px;
   }
 
   .partner__grid {

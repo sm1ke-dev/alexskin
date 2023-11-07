@@ -11,7 +11,11 @@ const Header = () => {
   const navigate = useNavigate();
 
   return (
-    <header className="header">
+    <header
+      className={`header ${
+        window.location.pathname === "/about" && "header_white"
+      }`}
+    >
       <div className="header__wrapper">
         <img className="header__burger" src={burger} alt="burger-menu" />
         <img

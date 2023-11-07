@@ -3,7 +3,6 @@
   margin: 0 auto;
   font-size: 14px;
   line-height: 19.6px;
-  padding: 0 50px;
 }
 
 .breadcrumbs__link,
@@ -19,22 +18,4 @@
 
 .breadcrumbs__link:hover {
   opacity: 0.7;
-}
-
-@media screen and (max-width: 1000px) {
-  .breadcrumbs {
-    padding: 0 30px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .breadcrumbs {
-    padding: 0 40px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .breadcrumbs {
-    padding: 0 15px;
-  }
 }

@@ -5,7 +5,7 @@ import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 const Service = () => {
   return (
     <main className="service">
-      <Breadcrumbs />
+      <Breadcrumbs page="Сервис" urlPath="service" />
       <div className="service__wrapper">
         <h2 className="service__title">Сервис</h2>
         <ul className="service__grid">
