@@ -82,6 +82,13 @@
   font-weight: 500;
   line-height: normal;
   text-transform: uppercase;
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.community__link:hover {
+  border: 1px solid rgba(50, 54, 64, 0.7);
+  opacity: 0.7;
 }
 
 .community__phones {

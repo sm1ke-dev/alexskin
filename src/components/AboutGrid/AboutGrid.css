@@ -81,6 +81,13 @@
   border-radius: 6px;
   display: block;
   text-align: center;
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.grid__link:hover {
+  border: 1px solid rgba(50, 54, 64, 0.7);
+  opacity: 0.7;
 }
 
 @media screen and (max-width: 1270px) {

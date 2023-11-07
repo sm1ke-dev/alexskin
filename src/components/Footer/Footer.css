@@ -15,6 +15,7 @@
 
 .footer__logo {
   margin-top: -3px;
+  cursor: pointer;
 }
 
 .footer__title {
@@ -54,6 +55,17 @@
   text-transform: uppercase;
 }
 
+.footer__link {
+  text-decoration: none;
+  color: #cdcfd7;
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.footer__link:hover {
+  opacity: 0.7;
+}
+
 .footer__line {
   height: 1px;
   max-width: 1440px;
@@ -73,6 +85,16 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 21.6px;
+}
+
+.footer__socials-icon {
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.footer__socials-icon:hover {
+  opacity: 0.7;
 }
 
 @media screen and (max-width: 1000px) {

@@ -84,6 +84,13 @@
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.product-grid__pic-button:hover {
+  opacity: 0.7;
 }
 
 .product-grid__description-wrapper {
@@ -197,6 +204,13 @@
   font-weight: 500;
   line-height: normal;
   text-transform: uppercase;
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.product-grid__button:hover {
+  opacity: 0.7;
 }
 
 .breadcrumbs {

@@ -18,7 +18,7 @@ const MainCommunity = () => {
           </ul>
         </div>
         <div className="main-community__second-column">
-          <Link to="/" className="main-community__link">
+          <Link to="#" className="main-community__link">
             Вступить
           </Link>
           <img src={qrcode} alt="QR-code" className="main-community__qrcode" />

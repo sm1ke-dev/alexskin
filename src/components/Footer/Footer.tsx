@@ -7,20 +7,48 @@ import vk from "../../images/vk-icon.svg";
 import ok from "../../images/ok-icon.svg";
 import zen from "../../images/zen-icon.svg";
 import cards from "../../images/cards.png";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   return (
     <footer className="footer">
       <div className="footer__top">
-        <img src={logo} alt="logo" className="footer__logo" />
+        <img
+          src={logo}
+          alt="logo"
+          className="footer__logo"
+          onClick={() => navigate("/")}
+        />
         <div className="footer__info">
           <h4 className="footer__title">Информация</h4>
           <ul className="footer__info-list">
-            <li className="footer__info-item">Документы</li>
-            <li className="footer__info-item">Оплата и доставка</li>
-            <li className="footer__info-item">Возврат</li>
-            <li className="footer__info-item">Блог</li>
-            <li className="footer__info-item">Где купить?</li>
+            <li className="footer__info-item">
+              <Link to="/documents" className="footer__link">
+                Документы
+              </Link>
+            </li>
+            <li className="footer__info-item">
+              <Link to="/service" className="footer__link">
+                Оплата и доставка
+              </Link>
+            </li>
+            <li className="footer__info-item">
+              <Link to="service" className="footer__link">
+                Возврат
+              </Link>
+            </li>
+            <li className="footer__info-item">
+              <Link to="/community" className="footer__link">
+                Блог
+              </Link>
+            </li>
+            <li className="footer__info-item">
+              <Link to="/catalog" className="footer__link">
+                Где купить?
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="footer__contacts">

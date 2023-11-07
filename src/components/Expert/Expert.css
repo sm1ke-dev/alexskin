@@ -59,6 +59,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.expert__play-button:hover {
+  opacity: 0.7;
 }
 
 .expert__play-icon {

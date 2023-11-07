@@ -43,6 +43,13 @@
   padding: 12px 26px;
   border-radius: 6px;
   border: 1px solid #323640;
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.main-about__link:hover {
+  border: 1px solid rgba(50, 54, 64, 0.7);
+  opacity: 0.7;
 }
 
 .main-about__pic-wrapper {

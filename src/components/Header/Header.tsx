@@ -5,14 +5,21 @@ import logo from "../../images/logo.svg";
 import search from "../../images/search-icon.svg";
 import cart from "../../images/cart-icon.svg";
 import account from "../../images/account-icon.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
+
   return (
     <header className="header">
       <div className="header__wrapper">
         <img className="header__burger" src={burger} alt="burger-menu" />
-        <img className="header__logo" src={logo} alt="logo" />
+        <img
+          className="header__logo"
+          src={logo}
+          alt="logo"
+          onClick={() => navigate("/")}
+        />
         <ul className="menu-list">
           <li className="menu-list__item">
             <Link className="menu-list__link" to="/about">
