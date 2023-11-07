@@ -1,8 +1,15 @@
 import React from "react";
 import "./Service.css";
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
+import { useNavigate } from "react-router-dom";
 
 const Service = () => {
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main className="service">
       <Breadcrumbs page="Сервис" urlPath="service" />
@@ -69,7 +76,12 @@ const Service = () => {
                 соответствии ТР ТС «О безопасности парфюмерно-косметической
                 продукции»
               </p>
-              <button className="grid-item__button">Смотреть документы</button>
+              <button
+                className="grid-item__button"
+                onClick={() => navigate("/documents")}
+              >
+                Смотреть документы
+              </button>
             </div>
             <div className="service__grid-item grid-item">
               <h3 className="grid-item__title">Оплата</h3>

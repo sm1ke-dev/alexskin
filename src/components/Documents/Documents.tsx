@@ -4,6 +4,10 @@ import "./Documents.css";
 import doc from "../../images/document.png";
 
 const Documents = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main className="docs">
       <Breadcrumbs page="Документы" urlPath="docs" />

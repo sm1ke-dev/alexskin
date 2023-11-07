@@ -8,6 +8,10 @@ import YourMask from "../YourMask/YourMask";
 import "./Main.css";
 
 const Main: React.FC = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main className="main">
       <Slogan />

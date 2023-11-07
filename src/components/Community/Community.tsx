@@ -6,6 +6,10 @@ import phones from "../../images/phones.png";
 import { Link } from "react-router-dom";
 
 const Community = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main className="community">
       <Breadcrumbs page="Коммьюнити" urlPath="community" />

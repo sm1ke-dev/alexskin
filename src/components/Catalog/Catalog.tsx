@@ -6,6 +6,10 @@ import Discount from "../Discount/Discount";
 import Expert from "../Expert/Expert";
 
 const Catalog = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main className="catalog">
       <Breadcrumbs page="Каталог" urlPath="catalog" />

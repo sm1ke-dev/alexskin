@@ -5,6 +5,10 @@ import Video from "../Video/Video";
 import "./About.css";
 
 const About: React.FC = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main className="about">
       <Breadcrumbs page="О бренде" urlPath="about" />
