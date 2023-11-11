@@ -1,6 +1,7 @@
 import React from "react";
 import "./MainCatalog.css";
 import Item from "../Item/Item";
+import { items } from "../../utils/constants/items";
 
 type MainCatalogProps = {
   page: string;
@@ -15,10 +16,14 @@ const MainCatalog: React.FC<MainCatalogProps> = ({
     <section className={`catalog-list ${page}__catalog-list`}>
       <h2 className="catalog-list__title">{title}</h2>
       <ul className="catalog-list__items">
-        <Item />
-        <Item />
-        <Item />
-        <Item />
+        {items.map((item) => (
+          <Item
+            key={item.id}
+            pic={item.mainPic}
+            name={item.name}
+            url={item.url}
+          />
+        ))}
       </ul>
     </section>
   );

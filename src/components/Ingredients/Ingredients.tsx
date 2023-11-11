@@ -2,29 +2,27 @@ import React from "react";
 import "./Ingredients.css";
 import ingredients from "../../images/ingredients-back.png";
 import Ingredient from "../Ingredient/Ingredient";
+import { ingredientsType } from "../../utils/constants/items";
 
-const Ingredients = () => {
+type IngredientsProps = {
+  item: ingredientsType;
+};
+
+const Ingredients: React.FC<IngredientsProps> = ({ item }) => {
   return (
-    <section className="ingredients">
+    <section
+      className="ingredients"
+      style={{ background: item.backgroundColor }}
+    >
       <hr className="ingredients__line" />
       <h2 className="ingredients__title">Ингредиенты</h2>
       <div className="ingredients__pic-wrapper">
-        <img src={ingredients} alt="ingredients" className="ingredients__pic" />
+        <img src={item.image} alt="ingredients" className="ingredients__pic" />
       </div>
       <ul className="ingredients__list">
-        <Ingredient />
-        <Ingredient />
-        <Ingredient />
-        <Ingredient />
-        <Ingredient />
-        <Ingredient />
-        <Ingredient />
-        <Ingredient />
-        <Ingredient />
-        <Ingredient />
-        <Ingredient />
-        <Ingredient />
-        <Ingredient />
+        {item.list.map((i) => (
+          <Ingredient key={i.id} {...i} borderColor={item.borderColor} />
+        ))}
       </ul>
     </section>
   );

@@ -6,18 +6,20 @@ import Ingredients from "../Ingredients/Ingredients";
 import Other from "../Other/Other";
 import ProductGrid from "../ProductGrid/ProductGrid";
 import Usage from "../Usage/Usage";
+import { items } from "../../utils/constants/items";
 import "./Product.css";
 
 const Product = () => {
-  const { itemId } = useParams();
+  const { itemUrl } = useParams();
+  const item = items.find((i) => i.url === itemUrl)!;
 
   return (
     <main className="product">
-      <ProductGrid />
-      <HowItWorks />
-      <Usage />
-      <Ingredients />
-      <Composition />
+      <ProductGrid item={item} />
+      <HowItWorks item={item.howItWorks} name={item.name} />
+      <Usage item={item.usage} />
+      <Ingredients item={item.ingredients} />
+      <Composition item={item.composition} />
       <Other />
     </main>
   );

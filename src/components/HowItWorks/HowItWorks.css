@@ -21,6 +21,13 @@
   height: 86.2vw;
 }
 
+.how-it-works__cream_peptides {
+  position: unset;
+  width: 47.69vw;
+  height: 39.74vw;
+  margin: -50px auto 8.97vw;
+}
+
 .how-it-works__title {
   display: none;
   margin: 0 0 100px;
@@ -53,8 +60,8 @@
   gap: 5px;
 }
 
-.how-it-works__text-wrapper_gap {
-  gap: 8px;
+.how-it-works__text-wrapper_peptides {
+  gap: 11px;
 }
 
 .how-it-works__num {
@@ -63,6 +70,10 @@
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
+}
+
+.how-it-works__num_peptides {
+  color: #827e7e;
 }
 
 .how-it-works__text {
@@ -101,8 +112,11 @@
   .how-it-works {
     width: auto;
     height: auto;
-    background-color: #efe4de;
     padding: 50px 40px 19.53vw;
+  }
+
+  .how-it-works_peptides {
+    padding-bottom: 8.97vw;
   }
 
   .how-it-works__img {
@@ -147,11 +161,21 @@
     padding: 35px 15px 97px;
   }
 
+  .how-it-works_peptides {
+    padding-bottom: 35px;
+  }
+
   .how-it-works__cream {
     top: 79px;
     right: 15px;
     width: 153px;
     height: 394px;
+  }
+
+  .how-it-works__cream_peptides {
+    width: 186px;
+    height: 155px;
+    margin: -33px auto 32px;
   }
 
   .how-it-works__title {
@@ -161,6 +185,10 @@
 
   .how-it-works__item {
     margin-bottom: 25px;
+  }
+
+  .how-it-works__item_peptides {
+    margin-bottom: 20px;
   }
 
   .how-it-works__num {
