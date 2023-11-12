@@ -28,7 +28,7 @@ const App: React.FC = () => {
         <Route path="/alexskin/faq" element={<Faq />} />
         <Route path="/alexskin/partnership" element={<Partnership />} />
         <Route path="/alexskin/documents" element={<Documents />} />
-        <Route path="/alexskin/*" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>
