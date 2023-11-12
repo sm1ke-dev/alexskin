@@ -12,6 +12,7 @@ import Documents from "../Documents/Documents";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Product from "../Product/Product";
+import NotFound from "../NotFound/NotFound";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/faq" element={<Faq />} />
         <Route path="/partnership" element={<Partnership />} />
         <Route path="/documents" element={<Documents />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>
