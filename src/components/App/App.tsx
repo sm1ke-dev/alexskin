@@ -14,7 +14,7 @@ import Footer from "../Footer/Footer";
 import Product from "../Product/Product";
 import NotFound from "../NotFound/NotFound";
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="page">
       <Header />
@@ -33,6 +33,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

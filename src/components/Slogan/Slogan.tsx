@@ -4,7 +4,7 @@ import image1 from "../../images/slogan_image1.png";
 import image2 from "../../images/slogan_image2.png";
 import image3 from "../../images/slogan_image3.png";
 
-const Slogan = () => {
+const Slogan: React.FC = () => {
   return (
     <section className="slogan">
       <h2 className="slogan__title">Любить. Ценить. Беречь себя.</h2>

@@ -2,7 +2,7 @@ import React from "react";
 import "./Video.css";
 import play from "../../images/play.svg";
 
-const Video = () => {
+const Video: React.FC = () => {
   return (
     <section className="video main__video">
       <h2 className="video__title">Бренд, родившийся из детской мечты</h2>

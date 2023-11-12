@@ -1,7 +1,7 @@
 import React from "react";
 import "./FaqQuestion.css";
 
-const FaqQuestion = () => {
+const FaqQuestion: React.FC = () => {
   const [isClicked, setIsClicked] = React.useState(false);
 
   return (

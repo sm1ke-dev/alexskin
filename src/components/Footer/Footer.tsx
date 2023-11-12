@@ -9,7 +9,7 @@ import zen from "../../images/zen-icon.svg";
 import cards from "../../images/cards.png";
 import { Link, useNavigate } from "react-router-dom";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   const navigate = useNavigate();
 
   return (

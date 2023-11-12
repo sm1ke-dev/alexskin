@@ -4,7 +4,7 @@ import "./MainAbout.css";
 import about1 from "../../images/about1.png";
 import about2 from "../../images/about2.png";
 
-const MainAbout = () => {
+const MainAbout: React.FC = () => {
   return (
     <section className="main-about">
       <h2 className="main-about__title main-about__title_small-res">

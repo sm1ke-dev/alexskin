@@ -3,7 +3,7 @@ import "./Discount.css";
 import vector from "../../images/catalog-vector.svg";
 import products from "../../images/catalog-3packs.png";
 
-const Discount = () => {
+const Discount: React.FC = () => {
   return (
     <section className="discount">
       <img src={vector} alt="vector" className="discount__vector" />

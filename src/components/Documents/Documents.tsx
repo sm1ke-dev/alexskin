@@ -3,7 +3,7 @@ import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 import "./Documents.css";
 import doc from "../../images/document.png";
 
-const Documents = () => {
+const Documents: React.FC = () => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

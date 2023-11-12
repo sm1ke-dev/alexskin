@@ -3,7 +3,7 @@ import "./Service.css";
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 import { useNavigate } from "react-router-dom";
 
-const Service = () => {
+const Service: React.FC = () => {
   const navigate = useNavigate();
 
   React.useEffect(() => {

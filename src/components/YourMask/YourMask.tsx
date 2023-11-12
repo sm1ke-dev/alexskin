@@ -3,7 +3,7 @@ import Question from "../Question/Question";
 import "./YourMask.css";
 import { questions } from "../../utils/constants/yourMask";
 
-const YourMask = () => {
+const YourMask: React.FC = () => {
   const [questionNumber, setQuestionNumber] = React.useState(1);
 
   return (

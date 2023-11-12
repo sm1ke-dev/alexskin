@@ -3,7 +3,7 @@ import "./Expert.css";
 import play from "../../images/play.svg";
 import sun from "../../images/expert-sun.svg";
 
-const Expert = () => {
+const Expert: React.FC = () => {
   return (
     <section className="expert">
       <h2 className="expert__title">Мнение эксперта</h2>

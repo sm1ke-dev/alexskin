@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./MainCommunity.css";
 import qrcode from "../../images/qrcode.png";
 
-const MainCommunity = () => {
+const MainCommunity: React.FC = () => {
   return (
     <section className="main-community">
       <div className="main-community__wrapper">

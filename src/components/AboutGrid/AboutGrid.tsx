@@ -30,7 +30,7 @@ const scrollAnimationRight = {
   },
 };
 
-const AboutGrid = () => {
+const AboutGrid: React.FC = () => {
   return (
     <section className="about__grid grid">
       <ul className="grid__wrapper">

@@ -5,7 +5,7 @@ import features from "../../images/features.png";
 import phones from "../../images/phones.png";
 import { Link } from "react-router-dom";
 
-const Community = () => {
+const Community: React.FC = () => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

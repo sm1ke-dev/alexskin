@@ -2,7 +2,7 @@ import React from "react";
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 import "./Partnership.css";
 
-const Partnership = () => {
+const Partnership: React.FC = () => {
   return (
     <main className="partner">
       <Breadcrumbs page="Сотрудничество" urlPath="partner" />

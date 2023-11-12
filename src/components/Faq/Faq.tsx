@@ -3,7 +3,7 @@ import "./Faq.css";
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 import FaqQuestion from "../FaqQuestion/FaqQuestion";
 
-const Faq = () => {
+const Faq: React.FC = () => {
   return (
     <main className="faq">
       <Breadcrumbs page="Часто задаваемые вопросы" urlPath="faq" />

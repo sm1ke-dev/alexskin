@@ -5,7 +5,7 @@ import MainCatalog from "../MainCatalog/MainCatalog";
 import Discount from "../Discount/Discount";
 import Expert from "../Expert/Expert";
 
-const Catalog = () => {
+const Catalog: React.FC = () => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

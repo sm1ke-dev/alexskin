@@ -5,7 +5,7 @@ import secondFeaturePic from "../../images/feature2-pic.png";
 import thirdFeaturePic from "../../images/feature3-pic.png";
 import featureImage from "../../images/feature-image.png";
 
-const Features = () => {
+const Features: React.FC = () => {
   return (
     <section className="features">
       <h2 className="features__title">В чем особенность AlexSkin?</h2>

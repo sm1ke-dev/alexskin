@@ -10,7 +10,7 @@ import { items } from "../../utils/constants/items";
 import "./Product.css";
 import ImageModalWindow from "../ImageModalWindow/ImageModalWindow";
 
-const Product = () => {
+const Product: React.FC = () => {
   const { itemUrl } = useParams();
   const item = items.find((i) => i.url === itemUrl)!;
   const [isModalOpened, setIsModalOpened] = React.useState(false);

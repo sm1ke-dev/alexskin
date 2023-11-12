@@ -8,7 +8,7 @@ import account from "../../images/account-icon.svg";
 import { Link, useNavigate } from "react-router-dom";
 import MobileMenu from "../MobileMenu/MobileMenu";
 
-const Header = () => {
+const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const navigate = useNavigate();
