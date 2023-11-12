@@ -24,7 +24,7 @@ const MainAbout: React.FC = () => {
           <br />
           Для себя. Для вас. Для каждой женщины.
         </p>
-        <Link to="/about" className="main-about__link">
+        <Link to="/alexskin/about" className="main-about__link">
           История бренда
         </Link>
       </div>

@@ -21,7 +21,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
       <ul className="mobile-menu__list">
         <li className="mobile-menu__item">
           <Link
-            to="/about"
+            to="/alexskin/about"
             className="mobile-menu__link"
             onClick={() => onClose(false)}
           >
@@ -30,7 +30,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
         </li>
         <li className="mobile-menu__item">
           <Link
-            to="/catalog"
+            to="/alexskin/catalog"
             className="mobile-menu__link"
             onClick={() => onClose(false)}
           >
@@ -39,7 +39,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
         </li>
         <li className="mobile-menu__item">
           <Link
-            to="/community"
+            to="/alexskin/community"
             className="mobile-menu__link"
             onClick={() => onClose(false)}
           >
@@ -48,7 +48,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
         </li>
         <li className="mobile-menu__item">
           <Link
-            to="/service"
+            to="/alexskin/service"
             className="mobile-menu__link"
             onClick={() => onClose(false)}
           >
@@ -57,7 +57,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
         </li>
         <li className="mobile-menu__item">
           <Link
-            to="/faq"
+            to="/alexskin/faq"
             className="mobile-menu__link"
             onClick={() => onClose(false)}
           >
@@ -66,7 +66,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
         </li>
         <li className="mobile-menu__item">
           <Link
-            to="/partnership"
+            to="/alexskin/partnership"
             className="mobile-menu__link"
             onClick={() => onClose(false)}
           >

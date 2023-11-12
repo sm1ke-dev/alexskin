@@ -34,7 +34,7 @@ const Community: React.FC = () => {
           <li className="community__feature">Акции и розыгрыши</li>
         </ul>
       </div>
-      <Link to="/" className="community__link">
+      <Link to="/alexskin/" className="community__link">
         Вступить
       </Link>
       <img src={phones} alt="phones" className="community__phones" />

@@ -17,7 +17,7 @@ const Header: React.FC = () => {
     <>
       <header
         className={`header ${
-          window.location.pathname === "/about" && "header_white"
+          window.location.pathname === "/alexskin/about" && "header_white"
         }`}
       >
         <div className="header__wrapper">
@@ -31,36 +31,36 @@ const Header: React.FC = () => {
             className="header__logo"
             src={logo}
             alt="logo"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/alexskin/")}
           />
           <ul className="menu-list">
             <li className="menu-list__item">
-              <Link className="menu-list__link" to="/about">
+              <Link className="menu-list__link" to="/alexskin/about">
                 О бренде
               </Link>
             </li>
             <li className="menu-list__item">
-              <Link className="menu-list__link" to="/catalog">
+              <Link className="menu-list__link" to="/alexskin/catalog">
                 Каталог
               </Link>
             </li>
             <li className="menu-list__item">
-              <Link className="menu-list__link" to="/community">
+              <Link className="menu-list__link" to="/alexskin/community">
                 Коммьюнити
               </Link>
             </li>
             <li className="menu-list__item">
-              <Link className="menu-list__link" to="/service">
+              <Link className="menu-list__link" to="/alexskin/service">
                 Сервис
               </Link>
             </li>
             <li className="menu-list__item">
-              <Link className="menu-list__link" to="/faq">
+              <Link className="menu-list__link" to="/alexskin/faq">
                 FAQ
               </Link>
             </li>
             <li className="menu-list__item">
-              <Link className="menu-list__link" to="/partnership">
+              <Link className="menu-list__link" to="/alexskin/partnership">
                 Сотрудничество
               </Link>
             </li>

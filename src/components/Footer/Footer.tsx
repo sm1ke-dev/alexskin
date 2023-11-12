@@ -19,33 +19,33 @@ const Footer: React.FC = () => {
           src={logo}
           alt="logo"
           className="footer__logo"
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/alexskin/")}
         />
         <div className="footer__info">
           <h4 className="footer__title">Информация</h4>
           <ul className="footer__info-list">
             <li className="footer__info-item">
-              <Link to="/documents" className="footer__link">
+              <Link to="/alexskin/documents" className="footer__link">
                 Документы
               </Link>
             </li>
             <li className="footer__info-item">
-              <Link to="/service" className="footer__link">
+              <Link to="/alexskin/service" className="footer__link">
                 Оплата и доставка
               </Link>
             </li>
             <li className="footer__info-item">
-              <Link to="service" className="footer__link">
+              <Link to="/alexskin/service" className="footer__link">
                 Возврат
               </Link>
             </li>
             <li className="footer__info-item">
-              <Link to="/community" className="footer__link">
+              <Link to="/alexskin/community" className="footer__link">
                 Блог
               </Link>
             </li>
             <li className="footer__info-item">
-              <Link to="/catalog" className="footer__link">
+              <Link to="/alexskin/catalog" className="footer__link">
                 Где купить?
               </Link>
             </li>

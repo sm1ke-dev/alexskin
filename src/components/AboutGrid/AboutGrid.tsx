@@ -195,7 +195,7 @@ const AboutGrid: React.FC = () => {
           <img src={pic5} alt="pic5" className="grid__pic" />
         </motion.li>
       </ul>
-      <Link to="/community" className="grid__link">
+      <Link to="/alexskin/community" className="grid__link">
         О коммьюнити
       </Link>
     </section>

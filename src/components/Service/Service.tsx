@@ -78,7 +78,7 @@ const Service: React.FC = () => {
               </p>
               <button
                 className="grid-item__button"
-                onClick={() => navigate("/documents")}
+                onClick={() => navigate("/alexskin/documents")}
               >
                 Смотреть документы
               </button>

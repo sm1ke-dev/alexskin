@@ -27,7 +27,7 @@ const Item: React.FC<ItemProps> = ({
 
   const onClick = () => {
     window.scrollTo(0, 0);
-    navigate(`/catalog/${url}`);
+    navigate(`/alexskin/catalog/${url}`);
   };
 
   return (

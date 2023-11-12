@@ -19,16 +19,16 @@ const App: React.FC = () => {
     <div className="page">
       <Header />
       <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/catalog" element={<Catalog />} />
-        <Route path="/catalog/:itemUrl" element={<Product />} />
-        <Route path="/community" element={<Community />} />
-        <Route path="/service" element={<Service />} />
-        <Route path="/faq" element={<Faq />} />
-        <Route path="/partnership" element={<Partnership />} />
-        <Route path="/documents" element={<Documents />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/alexskin/" element={<Main />} />
+        <Route path="/alexskin/about" element={<About />} />
+        <Route path="/alexskin/catalog" element={<Catalog />} />
+        <Route path="/alexskin/catalog/:itemUrl" element={<Product />} />
+        <Route path="/alexskin/community" element={<Community />} />
+        <Route path="/alexskin/service" element={<Service />} />
+        <Route path="/alexskin/faq" element={<Faq />} />
+        <Route path="/alexskin/partnership" element={<Partnership />} />
+        <Route path="/alexskin/documents" element={<Documents />} />
+        <Route path="/alexskin/*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>

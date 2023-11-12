@@ -9,7 +9,7 @@ type BreadcrumbsProps = {
 const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ page, urlPath }) => {
   return (
     <p className={`breadcrumbs ${urlPath && `${urlPath}__breadcrumbs`}`}>
-      <Link to="/" className="breadcrumbs__link">
+      <Link to="/alexskin/" className="breadcrumbs__link">
         Главная
       </Link>
       <span className="breadcrumbs__slash"> /</span>
