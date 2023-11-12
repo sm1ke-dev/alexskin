@@ -1,14 +1,15 @@
 import React from "react";
 import "./FaqQuestion.css";
+import { questionType } from "../../utils/constants/questions";
 
-const FaqQuestion: React.FC = () => {
+const FaqQuestion: React.FC<questionType> = ({ id, name, text }) => {
   const [isClicked, setIsClicked] = React.useState(false);
 
   return (
     <>
       <li className="faq-question">
         <div className="faq-question__wrapper">
-          <h3 className="faq-question__name">Как оплатить заказ?</h3>
+          <h3 className="faq-question__name">{name}</h3>
           <button
             className={`faq-question__button ${
               isClicked && "faq-question__button_clicked"
@@ -24,11 +25,7 @@ const FaqQuestion: React.FC = () => {
             isClicked && "faq-question__answer-wrapper_opened"
           }`}
         >
-          <p className="faq-question__answer">
-            Оплата заказа производится на сайте с помощью банковской карты (Мир,
-            Visa, MasterCard и др.) Отправка товара осуществляется только по
-            100% предоплате. Чек поступит на вашу электронную почту
-          </p>
+          <p className="faq-question__answer">{text}</p>
         </div>
       </li>
       <hr className="faq__line" />

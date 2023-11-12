@@ -2,6 +2,7 @@ import React from "react";
 import "./Faq.css";
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 import FaqQuestion from "../FaqQuestion/FaqQuestion";
+import { questions } from "../../utils/constants/questions";
 
 const Faq: React.FC = () => {
   return (
@@ -10,9 +11,9 @@ const Faq: React.FC = () => {
       <h2 className="faq__title">Часто задаваемые вопросы</h2>
       <ul className="faq__list">
         <hr className="faq__line" />
-        <FaqQuestion />
-        <FaqQuestion />
-        <FaqQuestion />
+        {questions.map((question) => (
+          <FaqQuestion key={question.id} {...question} />
+        ))}
       </ul>
       <div className="faq__support">
         <p className="faq__support-text">
