@@ -15,17 +15,44 @@ const ProductGrid: React.FC<ProductGridProps> = ({ item }) => {
   const [count, setCount] = React.useState(0);
   const [picIndex, setPicIndex] = React.useState(0);
   const [isChecked, setIsChecked] = React.useState(false);
+  console.log(picIndex);
 
   return (
     <div className="product-grid">
       <div className="product-grid__pics-wrapper">
-        <img
-          src={arrow}
-          alt="arrow"
-          className="product-grid__arrow product-grid__arrow_up"
-        />
+        <button
+          className={`product-grid__arrow-button product-grid__arrow-button_up ${
+            picIndex === 0 ? "product-grid__arrow-button_disabled" : ""
+          }`}
+          disabled={picIndex === 0}
+          onClick={() => setPicIndex(picIndex - 1)}
+        >
+          <svg
+            className="product-grid__arrow"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="10"
+            viewBox="0 0 16 10"
+            fill="none"
+          >
+            <path
+              d="M2 8L8 2L14 8"
+              stroke={picIndex === 0 ? "#9C9EA9" : "#383B47"}
+              strokeWidth="2"
+              strokeLinecap="square"
+            />
+          </svg>
+        </button>
         {item.productPics.map((pic) => (
-          <div className="product-grid__pic">
+          <div
+            key={item.productPics.indexOf(pic)}
+            className={`product-grid__pic ${
+              item.productPics.indexOf(pic) === picIndex
+                ? "product-grid__pic_selected"
+                : ""
+            }`}
+            onClick={() => setPicIndex(item.productPics.indexOf(pic))}
+          >
             <img
               src={pic}
               alt="main picture"
@@ -33,11 +60,33 @@ const ProductGrid: React.FC<ProductGridProps> = ({ item }) => {
             />
           </div>
         ))}
-        <img
-          src={arrow}
-          alt="arrow"
-          className="product-grid__arrow product-grid__arrow_down"
-        />
+        <button
+          className={`product-grid__arrow-button product-grid__arrow-button_down ${
+            picIndex === item.productPics.length - 1
+              ? "product-grid__arrow-button_disabled"
+              : ""
+          }`}
+          disabled={picIndex === item.productPics.length - 1}
+          onClick={() => setPicIndex(picIndex + 1)}
+        >
+          <svg
+            className="product-grid__arrow"
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="10"
+            viewBox="0 0 16 10"
+            fill="none"
+          >
+            <path
+              d="M2 2L8 8L14 2"
+              stroke={
+                picIndex === item.productPics.length - 1 ? "#9C9EA9" : "#383B47"
+              }
+              strokeWidth="2"
+              strokeLinecap="square"
+            />
+          </svg>
+        </button>
       </div>
       <div className="product-grid__main-wrapper">
         <img
@@ -45,16 +94,57 @@ const ProductGrid: React.FC<ProductGridProps> = ({ item }) => {
           alt="main picture"
           className="product-grid__main-pic"
         />
-        <img
-          src={arrow}
-          alt="arrow"
-          className="product-grid__arrow product-grid__arrow_left"
-        />
-        <img
-          src={arrow}
-          alt="arrow"
-          className="product-grid__arrow product-grid__arrow_right"
-        />
+        <button
+          className={`product-grid__arrow-button product-grid__arrow-button_left ${
+            picIndex === 0 ? "product-grid__arrow-button_disabled" : ""
+          }`}
+          disabled={picIndex === 0}
+          onClick={() => setPicIndex(picIndex - 1)}
+        >
+          <svg
+            className="product-grid__arrow"
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="16"
+            viewBox="0 0 10 16"
+            fill="none"
+          >
+            <path
+              d="M8 2L2 8L8 14"
+              stroke={picIndex === 0 ? "#9C9EA9" : "#383B47"}
+              strokeWidth="2"
+              strokeLinecap="square"
+            />
+          </svg>
+        </button>
+        <button
+          className={`product-grid__arrow-button product-grid__arrow-button_right ${
+            picIndex === item.productPics.length - 1
+              ? "product-grid__arrow-button_disabled"
+              : ""
+          }`}
+          disabled={picIndex === item.productPics.length - 1}
+          onClick={() => setPicIndex(picIndex + 1)}
+        >
+          <svg
+            className="product-grid__arrow"
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="16"
+            viewBox="0 0 10 16"
+            fill="none"
+          >
+            <path
+              d="M2 2L8 8L2 14"
+              stroke={
+                picIndex === item.productPics.length - 1 ? "#9C9EA9" : "#383B47"
+              }
+              strokeWidth="2"
+              strokeLinecap="square"
+            />
+          </svg>
+        </button>
+
         <button className="product-grid__pic-button">
           <img
             src={fullscreenIcon}
@@ -75,7 +165,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({ item }) => {
             {item.price} р.
           </p>
           {item.oldPrice !== 0 && (
-            <p className="product-grid__old-price">2800 р.</p>
+            <p className="product-grid__old-price">{item.oldPrice} р.</p>
           )}
           {!item.isAvailable && (
             <p className="product-grid__unavailable">Нет в наличии</p>

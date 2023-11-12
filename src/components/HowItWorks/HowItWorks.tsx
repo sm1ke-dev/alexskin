@@ -30,6 +30,7 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ item, name }) => {
       <ul className="how-it-works__list">
         {item.list.map((i) => (
           <li
+            key={i.id}
             className={`how-it-works__item ${
               isPeptides ? "how-it-works__item_peptides" : ""
             }`}

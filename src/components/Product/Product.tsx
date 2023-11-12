@@ -13,6 +13,10 @@ const Product = () => {
   const { itemUrl } = useParams();
   const item = items.find((i) => i.url === itemUrl)!;
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main className="product">
       <ProductGrid item={item} />

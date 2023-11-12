@@ -20,6 +20,7 @@ const Usage: React.FC<UsageProps> = ({ item }) => {
     <section className="usage">
       {item.methods.map((method) => (
         <div
+          key={method.id}
           className={`usage__wrapper ${
             method.id === 2 ? "usage__wrapper_second" : ""
           }`}
@@ -41,7 +42,7 @@ const Usage: React.FC<UsageProps> = ({ item }) => {
               />
             )} */}
             {method.list.map((i) => (
-              <li className="usage__item">
+              <li key={i.id} className="usage__item">
                 {i.id === 1 && (
                   <img
                     src={item.arrows[0]}

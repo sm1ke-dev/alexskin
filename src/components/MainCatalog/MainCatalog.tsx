@@ -17,12 +17,7 @@ const MainCatalog: React.FC<MainCatalogProps> = ({
       <h2 className="catalog-list__title">{title}</h2>
       <ul className="catalog-list__items">
         {items.map((item) => (
-          <Item
-            key={item.id}
-            pic={item.mainPic}
-            name={item.name}
-            url={item.url}
-          />
+          <Item key={item.id} {...item} />
         ))}
       </ul>
     </section>

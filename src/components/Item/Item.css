@@ -58,6 +58,10 @@
   color: #967444;
 }
 
+.item__price_unavailable {
+  color: #969aa5;
+}
+
 .item__old-price {
   color: #969aa5;
   text-decoration-line: line-through;
@@ -116,6 +120,10 @@
   .item__old-price {
     font-size: 16px;
   }
+
+  .item__description {
+    height: 51px;
+  }
 }
 
 @media screen and (max-width: 890px) {
@@ -151,6 +159,10 @@
   .item__icon-wrapper {
     margin: 0;
     padding: 3px 10px 10px 0;
+  }
+
+  .item__unavailable {
+    margin-top: 7px;
   }
 }
 
