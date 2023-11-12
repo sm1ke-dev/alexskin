@@ -9,9 +9,10 @@ import { itemsType } from "../../utils/constants/items";
 
 type ProductGridProps = {
   item: itemsType;
+  onClick: (img: string) => void;
 };
 
-const ProductGrid: React.FC<ProductGridProps> = ({ item }) => {
+const ProductGrid: React.FC<ProductGridProps> = ({ item, onClick }) => {
   const [count, setCount] = React.useState(0);
   const [picIndex, setPicIndex] = React.useState(0);
   const [isChecked, setIsChecked] = React.useState(false);
@@ -144,8 +145,10 @@ const ProductGrid: React.FC<ProductGridProps> = ({ item }) => {
             />
           </svg>
         </button>
-
-        <button className="product-grid__pic-button">
+        <button
+          className="product-grid__pic-button"
+          onClick={() => onClick(item.productPics[picIndex])}
+        >
           <img
             src={fullscreenIcon}
             alt="fullscreenIcon"
