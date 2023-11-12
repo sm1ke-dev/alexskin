@@ -1,7 +1,5 @@
 import React from "react";
 import "./HowItWorks.css";
-import howItWorksImg from "../../images/how-it-work1.png";
-import morningMasqueItem from "../../images/morning-masque-noback.png";
 import { howItWorksType } from "../../utils/constants/items";
 
 type HowItWorksProps = {
@@ -18,7 +16,6 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ item, name }) => {
       style={{ backgroundColor: item.backgroundColor }}
     >
       <img src={item.image} alt="Как действует" className="how-it-works__img" />
-      {/* <img src={item.itemPic} alt="cream" className="how-it-works__cream" /> */}
       <h2 className="how-it-works__title">Как действует {name}?</h2>
       <img
         src={item.itemPic}

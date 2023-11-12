@@ -1,6 +1,5 @@
 import React from "react";
 import "./Question.css";
-import arrow from "../../images/arrow.svg";
 import Answer from "../Answer/Answer";
 import { QuestionType } from "../../utils/constants/yourMask";
 type QuestionProps = QuestionType & {
@@ -35,7 +34,7 @@ const Question: React.FC<QuestionProps> = ({
     "11": "",
   });
 
-  const nextQuestion = (answerId?: any) => {
+  const nextQuestion = (answerId?: string) => {
     setIsQuestionChanged(true);
     if (typeof answerId === "string") {
       setAnswersObj({ ...answersObj, [id]: answerId });
@@ -113,7 +112,7 @@ const Question: React.FC<QuestionProps> = ({
               ? "question__arrow_disabled"
               : ""
           }`}
-          onClick={nextQuestion}
+          onClick={() => nextQuestion()}
           disabled={questionNumber === length || answersObj[id] === ""}
         >
           <svg

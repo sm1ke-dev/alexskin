@@ -1,6 +1,5 @@
 import React from "react";
 import "./Composition.css";
-import pic from "../../images/composition-pic.png";
 import { compositionType } from "../../utils/constants/items";
 
 type CompositionProps = {

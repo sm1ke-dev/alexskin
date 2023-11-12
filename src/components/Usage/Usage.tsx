@@ -1,14 +1,5 @@
 import React from "react";
 import "./Usage.css";
-import gradient from "../../images/usage-gradient.svg";
-import face1 from "../../images/face-image1.svg";
-import face2 from "../../images/face-image2.svg";
-import face3 from "../../images/face-image3.svg";
-import numVector1 from "../../images/usage-vector1.svg";
-import numVector2 from "../../images/usage-vector2.svg";
-import numVector3 from "../../images/usage-vector3.svg";
-import topArrow from "../../images/usage-top-arrow.png";
-import bottomArrow from "../../images/usage-bottom-arrow.png";
 import { usageType } from "../../utils/constants/items";
 
 type UsageProps = {
@@ -29,18 +20,6 @@ const Usage: React.FC<UsageProps> = ({ item }) => {
             {item.methods.length > 1 && `${method.id} `}Способ применения
           </h2>
           <ul className="usage__list">
-            {/* <img
-              src={item.arrows[0]}
-              alt="arrow"
-              className="usage__top-arrow"
-            /> */}
-            {/* {method.list.length > 2 && (
-              <img
-                src={item.arrows[1]}
-                alt="arrow"
-                className="usage__bottom-arrow"
-              />
-            )} */}
             {method.list.map((i) => (
               <li key={i.id} className="usage__item">
                 {i.id === 1 && (

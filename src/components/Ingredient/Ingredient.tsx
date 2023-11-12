@@ -1,6 +1,5 @@
 import React from "react";
 import "./Ingredient.css";
-import icon from "../../images/ingredients-icon1.svg";
 
 type IngredientProps = {
   img: string;

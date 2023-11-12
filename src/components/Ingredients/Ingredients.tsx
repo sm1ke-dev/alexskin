@@ -1,6 +1,5 @@
 import React from "react";
 import "./Ingredients.css";
-import ingredients from "../../images/ingredients-back.png";
 import Ingredient from "../Ingredient/Ingredient";
 import { ingredientsType } from "../../utils/constants/items";
 

@@ -1,6 +1,5 @@
 import React from "react";
 import "./Answer.css";
-import background from "../../images/background.png";
 import { AnswerType } from "../../utils/constants/yourMask";
 type AnswerProps = AnswerType & {
   isQuestionChanged: boolean;

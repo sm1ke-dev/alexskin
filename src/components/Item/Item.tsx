@@ -1,6 +1,5 @@
 import React from "react";
 import "./Item.css";
-import morningMasque from "../../images/morning.png";
 import cart from "../../images/cart-icon.svg";
 import { useNavigate } from "react-router-dom";
 

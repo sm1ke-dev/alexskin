@@ -1,9 +1,7 @@
 import React from "react";
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 import "./ProductGrid.css";
-import arrow from "../../images/product-arrow.svg";
 import fullscreenIcon from "../../images/fullscreen-icon.svg";
-import mainPic from "../../images/Morning-Masque-pic.png";
 import checkMark from "../../images/check-mark.svg";
 import { itemsType } from "../../utils/constants/items";
 
@@ -16,7 +14,6 @@ const ProductGrid: React.FC<ProductGridProps> = ({ item, onClick }) => {
   const [count, setCount] = React.useState(0);
   const [picIndex, setPicIndex] = React.useState(0);
   const [isChecked, setIsChecked] = React.useState(false);
-  console.log(picIndex);
 
   return (
     <div className="product-grid">
