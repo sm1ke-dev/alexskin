@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./AboutGrid.css";
 import { Link } from "react-router-dom";
 import pic1 from "../../images/grid-pic1.png";
@@ -7,11 +8,40 @@ import pic3 from "../../images/grid-pic3.png";
 import pic4 from "../../images/grid-pic4.png";
 import pic5 from "../../images/grid-pic5.png";
 
+const scrollAnimationLeft = {
+  hidden: {
+    x: -100,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+  },
+};
+
+const scrollAnimationRight = {
+  hidden: {
+    x: 100,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+  },
+};
+
 const AboutGrid = () => {
   return (
     <section className="about__grid grid">
       <ul className="grid__wrapper">
-        <li className="grid__text-cell">
+        <motion.li
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.2, once: true }}
+          variants={scrollAnimationLeft}
+          transition={{ duration: 0.4 }}
+          className="grid__text-cell"
+        >
           <p className="grid__year">2003 год</p>
           <span className="grid__line"></span>
           <div className="grid__text-wrapper">
@@ -25,14 +55,35 @@ const AboutGrid = () => {
               тоники, скрабы и маски.
             </p>
           </div>
-        </li>
-        <li className="grid__pic-cell">
+        </motion.li>
+        <motion.li
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.2, once: true }}
+          variants={scrollAnimationRight}
+          transition={{ duration: 0.4 }}
+          className="grid__pic-cell"
+        >
           <img src={pic1} alt="pic1" className="grid__pic" />
-        </li>
-        <li className="grid__pic-cell">
+        </motion.li>
+        <motion.li
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.2, once: true }}
+          variants={scrollAnimationLeft}
+          transition={{ duration: 0.4 }}
+          className="grid__pic-cell"
+        >
           <img src={pic2} alt="pic2" className="grid__pic" />
-        </li>
-        <li className="grid__text-cell _order3">
+        </motion.li>
+        <motion.li
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.2, once: true }}
+          variants={scrollAnimationRight}
+          transition={{ duration: 0.4 }}
+          className="grid__text-cell _order3"
+        >
           <p className="grid__year">2016 год</p>
           <span className="grid__line"></span>
           <div className="grid__text-wrapper">
@@ -47,8 +98,15 @@ const AboutGrid = () => {
               и аромата до упаковки и результата.
             </p>
           </div>
-        </li>
-        <li className="grid__text-cell">
+        </motion.li>
+        <motion.li
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.2, once: true }}
+          variants={scrollAnimationLeft}
+          transition={{ duration: 0.4 }}
+          className="grid__text-cell"
+        >
           <p className="grid__year">2017-2018 год</p>
           <span className="grid__line"></span>
           <div className="grid__text-wrapper">
@@ -62,14 +120,35 @@ const AboutGrid = () => {
               самые три маски – MORNING, NIGHT MESO, PURE&SHINE MASQUE.
             </p>
           </div>
-        </li>
-        <li className="grid__pic-cell">
+        </motion.li>
+        <motion.li
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.2, once: true }}
+          variants={scrollAnimationRight}
+          transition={{ duration: 0.4 }}
+          className="grid__pic-cell"
+        >
           <img src={pic3} alt="pic3" className="grid__pic" />
-        </li>
-        <li className="grid__pic-cell">
+        </motion.li>
+        <motion.li
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.2, once: true }}
+          variants={scrollAnimationLeft}
+          transition={{ duration: 0.4 }}
+          className="grid__pic-cell"
+        >
           <img src={pic4} alt="pic4" className="grid__pic" />
-        </li>
-        <li className="grid__text-cell _order7">
+        </motion.li>
+        <motion.li
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.2, once: true }}
+          variants={scrollAnimationRight}
+          transition={{ duration: 0.4 }}
+          className="grid__text-cell _order7"
+        >
           <p className="grid__year">2019-2022 гОД</p>
           <span className="grid__line"></span>
           <div className="grid__text-wrapper">
@@ -82,8 +161,15 @@ const AboutGrid = () => {
               возможных платформах.
             </p>
           </div>
-        </li>
-        <li className="grid__text-cell">
+        </motion.li>
+        <motion.li
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.2, once: true }}
+          variants={scrollAnimationLeft}
+          transition={{ duration: 0.4 }}
+          className="grid__text-cell"
+        >
           <p className="grid__year">2022-2023 гОД</p>
           <span className="grid__line"></span>
           <div className="grid__text-wrapper">
@@ -97,10 +183,17 @@ const AboutGrid = () => {
               берёт интервью у интересных гостей.
             </p>
           </div>
-        </li>
-        <li className="grid__pic-cell">
+        </motion.li>
+        <motion.li
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.2, once: true }}
+          variants={scrollAnimationRight}
+          transition={{ duration: 0.4 }}
+          className="grid__pic-cell"
+        >
           <img src={pic5} alt="pic5" className="grid__pic" />
-        </li>
+        </motion.li>
       </ul>
       <Link to="/community" className="grid__link">
         О коммьюнити
