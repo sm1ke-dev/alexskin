@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import logo from "../../images/white-logo.svg";
+import logo from "../../images/white-logo.png";
 import tg from "../../images/tg-icon.svg";
 import inst from "../../images/inst-icon.svg";
 import vk from "../../images/vk-icon.svg";
