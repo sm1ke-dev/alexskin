@@ -1,5 +1,6 @@
 .faq-question {
   padding: 15px 0;
+  cursor: pointer;
 }
 
 .faq-question__wrapper {

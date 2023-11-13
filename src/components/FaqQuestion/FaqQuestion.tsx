@@ -7,14 +7,13 @@ const FaqQuestion: React.FC<questionType> = ({ id, name, text }) => {
 
   return (
     <>
-      <li className="faq-question">
+      <li className="faq-question" onClick={() => setIsClicked(!isClicked)}>
         <div className="faq-question__wrapper">
           <h3 className="faq-question__name">{name}</h3>
           <button
             className={`faq-question__button ${
               isClicked && "faq-question__button_clicked"
             }`}
-            onClick={() => setIsClicked(!isClicked)}
           >
             <span className="line1"></span>
             <span className="line2"></span>
