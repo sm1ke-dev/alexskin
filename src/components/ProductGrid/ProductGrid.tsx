@@ -15,6 +15,10 @@ const ProductGrid: React.FC<ProductGridProps> = ({ item, onClick }) => {
   const [picIndex, setPicIndex] = React.useState(0);
   const [isChecked, setIsChecked] = React.useState(false);
 
+  React.useEffect(() => {
+    setPicIndex(0);
+  }, [window.location.pathname]);
+
   return (
     <div className="product-grid">
       <div className="product-grid__pics-wrapper">
