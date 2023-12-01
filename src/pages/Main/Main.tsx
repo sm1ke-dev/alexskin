@@ -5,7 +5,7 @@ import MainCatalog from "../../components/MainCatalog/MainCatalog";
 import MainCommunity from "../../components/MainCommunity/MainCommunity";
 import Slogan from "../../components/Slogan/Slogan";
 import YourMask from "../../components/YourMask/YourMask";
-import "./Main.css";
+import styles from "./Main.module.scss";
 
 const Main: React.FC = () => {
   React.useEffect(() => {
@@ -13,9 +13,9 @@ const Main: React.FC = () => {
   }, []);
 
   return (
-    <main className="main">
+    <main className={styles.main}>
       <Slogan />
-      <MainCatalog page="main" />
+      <MainCatalog />
       <MainAbout />
       <Features />
       <YourMask />

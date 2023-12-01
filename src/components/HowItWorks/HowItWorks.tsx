@@ -1,5 +1,5 @@
 import React from "react";
-import "./HowItWorks.css";
+import styles from "./HowItWorks.module.scss";
 import { howItWorksType } from "../../utils/constants/items";
 
 type HowItWorksProps = {
@@ -12,48 +12,54 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ item, name }) => {
 
   return (
     <section
-      className={`how-it-works ${isPeptides ? "how-it-works_peptides" : ""}`}
+      className={`${styles.howItWorks} ${
+        isPeptides ? styles.howItWorks_peptides : ""
+      }`}
       style={{ backgroundColor: item.backgroundColor }}
     >
-      <img src={item.image} alt="Как действует" className="how-it-works__img" />
-      <h2 className="how-it-works__title">Как действует {name}?</h2>
+      <img
+        src={item.image}
+        alt="Как действует"
+        className={styles.howItWorks__img}
+      />
+      <h2 className={styles.howItWorks__title}>Как действует {name}?</h2>
       <img
         src={item.itemPic}
         alt="cream"
-        className={`how-it-works__cream ${
-          isPeptides ? "how-it-works__cream_peptides" : ""
+        className={`${styles.howItWorks__cream} ${
+          isPeptides ? styles.howItWorks__cream_peptides : ""
         }`}
       />
-      <ul className="how-it-works__list">
+      <ul className={styles.howItWorks__list}>
         {item.list.map((i) => (
           <li
             key={i.id}
-            className={`how-it-works__item ${
-              isPeptides ? "how-it-works__item_peptides" : ""
+            className={`${styles.howItWorks__item} ${
+              isPeptides ? styles.howItWorks__item_peptides : ""
             }`}
           >
             <div
-              className={`how-it-works__text-wrapper ${
-                isPeptides ? "how-it-works__text-wrapper_peptides" : ""
+              className={`${styles.howItWorks__textWrapper} ${
+                isPeptides ? styles.howItWorks__textWrapper_peptides : ""
               }`}
             >
               <div
-                className={`how-it-works__num ${
-                  isPeptides ? "how-it-works__num_peptides" : ""
+                className={`${styles.howItWorks__num} ${
+                  isPeptides ? styles.howItWorks__num_peptides : ""
                 }`}
               >
                 {i.id}
               </div>
-              <p className="how-it-works__text">{i.text}</p>
+              <p className={styles.howItWorks__text}>{i.text}</p>
             </div>
             {!isPeptides && (
-              <div className="how-it-works__line-wrapper">
+              <div className={styles.howItWorks__lineWrapper}>
                 <hr
-                  className="how-it-works__line"
+                  className={styles.howItWorks__line}
                   style={{ borderColor: item.lineColor }}
                 />
                 <div
-                  className="how-it-works__circle"
+                  className={styles.howItWorks__circle}
                   style={{ borderColor: item.lineColor }}
                 ></div>
               </div>

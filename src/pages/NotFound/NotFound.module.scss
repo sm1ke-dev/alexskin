@@ -1,0 +1,52 @@
+.notFound {
+  &__title {
+    margin: 50px 0 5px;
+    font-weight: normal;
+    text-align: center;
+    font-size: 140px;
+    line-height: normal;
+  }
+
+  &__subtitle {
+    margin: 0 0 184px;
+    text-align: center;
+    font-size: 16px;
+    line-height: normal;
+  }
+
+  &__link {
+    margin-bottom: 50px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    &__title {
+      margin-top: 200px;
+    }
+  }
+
+  @media screen and (max-width: 620px) {
+    &__title {
+      margin: 220px 0 11px;
+      font-size: 80px;
+    }
+
+    &__subtitle {
+      font-size: 12px;
+      margin-bottom: 230px;
+    }
+
+    &__link {
+      font-size: 12px;
+    }
+  }
+}

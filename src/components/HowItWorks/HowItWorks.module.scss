@@ -1,0 +1,210 @@
+.howItWorks {
+  width: 100%;
+  height: 902px;
+  position: relative;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__cream {
+    display: none;
+    position: absolute;
+    top: 145px;
+    right: 25px;
+    z-index: 0;
+    width: 33.72vw;
+    height: 86.2vw;
+
+    &_peptides {
+      position: unset;
+      width: 47.69vw;
+      height: 39.74vw;
+      margin: -50px auto 8.97vw;
+    }
+  }
+
+  &__title {
+    display: none;
+    margin: 0 0 100px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: none;
+    position: relative;
+    z-index: 2;
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    margin-bottom: 40px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__textWrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    &_peptides {
+      gap: 11px;
+    }
+  }
+
+  &__num {
+    color: #967444;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+
+    &_peptides {
+      color: #827e7e;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  &__lineWrapper {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    margin-right: 174px;
+  }
+
+  &__line {
+    flex: 0 1 500px;
+    border: 1px solid #ccae9c;
+  }
+
+  &__circle {
+    flex: 0 0 8px;
+    height: 8px;
+    border: 2px solid #ccae9c;
+    border-radius: 50%;
+  }
+
+  @media screen and (max-width: 1290px) {
+    height: 69.92vw;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: auto;
+    height: auto;
+    padding: 50px 40px 19.53vw;
+
+    &_peptides {
+      padding-bottom: 8.97vw;
+    }
+
+    &__img {
+      display: none;
+    }
+
+    &__cream {
+      top: 21vw;
+      display: block;
+    }
+
+    &__title {
+      display: block;
+      font-size: 4.6vw;
+      margin-bottom: 13.02vw;
+    }
+
+    &__list {
+      display: block;
+    }
+
+    &__item {
+      margin-bottom: 5.21vw;
+    }
+
+    &__num {
+      font-size: 4.1vw;
+    }
+
+    &__text {
+      font-size: 3.08vw;
+    }
+
+    &__lineWrapper {
+      margin-top: 0.65vw;
+      margin-right: 22.66vw;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 35px 15px 97px;
+
+    &_peptides {
+      padding-bottom: 35px;
+    }
+
+    &__cream {
+      top: 79px;
+      right: 15px;
+      width: 153px;
+      height: 394px;
+
+      &_peptides {
+        width: 186px;
+        height: 155px;
+        margin: -33px auto 32px;
+      }
+    }
+
+    &__title {
+      font-size: 20px;
+      margin-bottom: 53px;
+    }
+
+    &__item {
+      margin-bottom: 25px;
+
+      &_peptides {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__num {
+      font-size: 16px;
+    }
+
+    &__text {
+      font-size: 12px;
+    }
+
+    &__lineWrapper {
+      margin: 2px 111px 0 0;
+    }
+
+    &__line {
+      border: none;
+      border-bottom: 1px solid #ccae9c;
+    }
+
+    &__circle {
+      flex: 0 0 6px;
+      height: 6px;
+      border-width: 1px;
+    }
+  }
+}

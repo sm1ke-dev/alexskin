@@ -1,5 +1,5 @@
 import React from "react";
-import "./Composition.css";
+import styles from "./Composition.module.scss";
 import { compositionType } from "../../utils/constants/items";
 
 type CompositionProps = {
@@ -8,11 +8,11 @@ type CompositionProps = {
 
 const Composition: React.FC<CompositionProps> = ({ item }) => {
   return (
-    <section className="composition">
-      <h2 className="composition__title">Состав</h2>
-      <p className="composition__text">{item.text}</p>
-      <div className="composition__pic-wrapper">
-        <img src={item.image} alt="pic" className="composition__pic" />
+    <section className={styles.composition}>
+      <h2 className={styles.composition__title}>Состав</h2>
+      <p className={styles.composition__text}>{item.text}</p>
+      <div className={styles.composition__picWrapper}>
+        <img src={item.image} alt="pic" className={styles.composition__pic} />
       </div>
     </section>
   );

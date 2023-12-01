@@ -2,7 +2,7 @@ import React from "react";
 import AboutGrid from "../../components/AboutGrid/AboutGrid";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import Video from "../../components/Video/Video";
-import "./About.css";
+import styles from "./About.module.scss";
 
 const About: React.FC = () => {
   React.useEffect(() => {
@@ -10,8 +10,10 @@ const About: React.FC = () => {
   }, []);
 
   return (
-    <main className="about">
-      <Breadcrumbs page="О бренде" urlPath="about" />
+    <main className={styles.about}>
+      <div className={styles.about__breadcrumbs}>
+        <Breadcrumbs page="О бренде" />
+      </div>
       <Video />
       <AboutGrid />
     </main>

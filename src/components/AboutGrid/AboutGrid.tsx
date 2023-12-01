@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import "./AboutGrid.css";
+import styles from "./AboutGrid.module.scss";
 import { Link } from "react-router-dom";
 import pic1 from "../../images/grid-pic1.png";
 import pic2 from "../../images/grid-pic2.png";
@@ -32,23 +32,23 @@ const scrollAnimationRight = {
 
 const AboutGrid: React.FC = () => {
   return (
-    <section className="about__grid grid">
-      <ul className="grid__wrapper">
+    <section className={`${styles.about__grid} ${styles.grid}`}>
+      <ul className={styles.grid__wrapper}>
         <motion.li
           initial="hidden"
           whileInView="visible"
           viewport={{ amount: 0.2, once: true }}
           variants={scrollAnimationLeft}
           transition={{ duration: 0.4 }}
-          className="grid__text-cell"
+          className={styles.grid__textCell}
         >
-          <p className="grid__year">2003 год</p>
-          <span className="grid__line"></span>
-          <div className="grid__text-wrapper">
-            <h4 className="grid__title">
+          <p className={styles.grid__year}>2003 год</p>
+          <span className={styles.grid__line}></span>
+          <div className={styles.grid__textWrapper}>
+            <h4 className={styles.grid__title}>
               КАМЧАТКА – ЗАРОДИЛАСЬ ЛЮБОВЬ К УХОДУ
             </h4>
-            <p className="grid__text">
+            <p className={styles.grid__text}>
               Александра живёт в камчатской глубинке у бабушки. Та учит её
               всему, что знает сама – как собирать и запаривать травы. Рождается
               интерес, маленькая Саша экспериментирует, делает натуральные
@@ -62,9 +62,9 @@ const AboutGrid: React.FC = () => {
           viewport={{ amount: 0.2, once: true }}
           variants={scrollAnimationRight}
           transition={{ duration: 0.4 }}
-          className="grid__pic-cell"
+          className={styles.grid__picCell}
         >
-          <img src={pic1} alt="pic1" className="grid__pic" />
+          <img src={pic1} alt="pic1" className={styles.grid__pic} />
         </motion.li>
         <motion.li
           initial="hidden"
@@ -72,9 +72,9 @@ const AboutGrid: React.FC = () => {
           viewport={{ amount: 0.2, once: true }}
           variants={scrollAnimationLeft}
           transition={{ duration: 0.4 }}
-          className="grid__pic-cell"
+          className={styles.grid__picCell}
         >
-          <img src={pic2} alt="pic2" className="grid__pic" />
+          <img src={pic2} alt="pic2" className={styles.grid__pic} />
         </motion.li>
         <motion.li
           initial="hidden"
@@ -82,15 +82,15 @@ const AboutGrid: React.FC = () => {
           viewport={{ amount: 0.2, once: true }}
           variants={scrollAnimationRight}
           transition={{ duration: 0.4 }}
-          className="grid__text-cell _order3"
+          className={`${styles.grid__textCell} ${styles._order3}`}
         >
-          <p className="grid__year">2016 год</p>
-          <span className="grid__line"></span>
-          <div className="grid__text-wrapper">
-            <h4 className="grid__title">
+          <p className={styles.grid__year}>2016 год</p>
+          <span className={styles.grid__line}></span>
+          <div className={styles.grid__textWrapper}>
+            <h4 className={styles.grid__title}>
               КРАСНОДАР – ПОЯВИЛСЯ ЗАПРОС И ПЕРВЫЕ ИДЕИ
             </h4>
-            <p className="grid__text">
+            <p className={styles.grid__text}>
               Александра увлечена косметикой, уход за собой возведён в ранг
               религии. Среди многочисленных брендов не получается найти
               идеальный уход. Приходит идея создать собственную линейку
@@ -105,15 +105,15 @@ const AboutGrid: React.FC = () => {
           viewport={{ amount: 0.2, once: true }}
           variants={scrollAnimationLeft}
           transition={{ duration: 0.4 }}
-          className="grid__text-cell"
+          className={styles.grid__textCell}
         >
-          <p className="grid__year">2017-2018 год</p>
-          <span className="grid__line"></span>
-          <div className="grid__text-wrapper">
-            <h4 className="grid__title">
+          <p className={styles.grid__year}>2017-2018 год</p>
+          <span className={styles.grid__line}></span>
+          <div className={styles.grid__textWrapper}>
+            <h4 className={styles.grid__title}>
               МОСКВА – ПОИСК ПРОИЗВОДСТВА И РАЗРАБОТКА ПРОДУКЦИИ
             </h4>
-            <p className="grid__text">
+            <p className={styles.grid__text}>
               Найдено производство. Целый год Александра изучает составы,
               составляет техническое задание для лаборатории и тестирует все
               образцы на себе, внося корректировки. Пока на свет не появились те
@@ -127,9 +127,9 @@ const AboutGrid: React.FC = () => {
           viewport={{ amount: 0.2, once: true }}
           variants={scrollAnimationRight}
           transition={{ duration: 0.4 }}
-          className="grid__pic-cell"
+          className={styles.grid__picCell}
         >
-          <img src={pic3} alt="pic3" className="grid__pic" />
+          <img src={pic3} alt="pic3" className={styles.grid__pic} />
         </motion.li>
         <motion.li
           initial="hidden"
@@ -137,9 +137,9 @@ const AboutGrid: React.FC = () => {
           viewport={{ amount: 0.2, once: true }}
           variants={scrollAnimationLeft}
           transition={{ duration: 0.4 }}
-          className="grid__pic-cell"
+          className={styles.grid__picCell}
         >
-          <img src={pic4} alt="pic4" className="grid__pic" />
+          <img src={pic4} alt="pic4" className={styles.grid__pic} />
         </motion.li>
         <motion.li
           initial="hidden"
@@ -147,15 +147,15 @@ const AboutGrid: React.FC = () => {
           viewport={{ amount: 0.2, once: true }}
           variants={scrollAnimationRight}
           transition={{ duration: 0.4 }}
-          className="grid__text-cell _order7"
+          className={`${styles.grid__textCell} ${styles._order7}`}
         >
-          <p className="grid__year">2019-2022 гОД</p>
-          <span className="grid__line"></span>
-          <div className="grid__text-wrapper">
-            <h4 className="grid__title">
+          <p className={styles.grid__year}>2019-2022 гОД</p>
+          <span className={styles.grid__line}></span>
+          <div className={styles.grid__textWrapper}>
+            <h4 className={styles.grid__title}>
               РОССИЯ – ЗАПУСК ПРОДАЖ И ЗВАНИЕ БЕСТСЕЛЛЕРА
             </h4>
-            <p className="grid__text">
+            <p className={styles.grid__text}>
               В 2022 году ALEXSKIN получает звание бестселлера от маркетплейсов
               Ozon и Wildberries. Уже к концу года маски раскуплены на всех
               возможных платформах.
@@ -168,13 +168,15 @@ const AboutGrid: React.FC = () => {
           viewport={{ amount: 0.2, once: true }}
           variants={scrollAnimationLeft}
           transition={{ duration: 0.4 }}
-          className="grid__text-cell"
+          className={styles.grid__textCell}
         >
-          <p className="grid__year">2022-2023 гОД</p>
-          <span className="grid__line"></span>
-          <div className="grid__text-wrapper">
-            <h4 className="grid__title">РОССИЯ – РЕБРЕНДИНГ И КОММЬЮНИТИ</h4>
-            <p className="grid__text">
+          <p className={styles.grid__year}>2022-2023 гОД</p>
+          <span className={styles.grid__line}></span>
+          <div className={styles.grid__textWrapper}>
+            <h4 className={styles.grid__title}>
+              РОССИЯ – РЕБРЕНДИНГ И КОММЬЮНИТИ
+            </h4>
+            <p className={styles.grid__text}>
               Происходит ребрендинг. ALEXSKIN меняет формат упаковки и дизайн
               своей линейки, дополняет составы новыми компонентами. Идёт
               разработка и выпуск нового продукта – пептидных патчей. Вокруг
@@ -190,12 +192,12 @@ const AboutGrid: React.FC = () => {
           viewport={{ amount: 0.2, once: true }}
           variants={scrollAnimationRight}
           transition={{ duration: 0.4 }}
-          className="grid__pic-cell"
+          className={styles.grid__picCell}
         >
-          <img src={pic5} alt="pic5" className="grid__pic" />
+          <img src={pic5} alt="pic5" className={styles.grid__pic} />
         </motion.li>
       </ul>
-      <Link to="/alexskin/community" className="grid__link">
+      <Link to="/alexskin/community" className={styles.grid__link}>
         О коммьюнити
       </Link>
     </section>

@@ -7,7 +7,7 @@ import Other from "../../components/Other/Other";
 import ProductGrid from "../../components/ProductGrid/ProductGrid";
 import Usage from "../../components/Usage/Usage";
 import { items } from "../../utils/constants/items";
-import "./Product.css";
+import styles from "./Product.module.scss";
 import ImageModalWindow from "../../components/ImageModalWindow/ImageModalWindow";
 
 const Product: React.FC = () => {
@@ -27,7 +27,7 @@ const Product: React.FC = () => {
 
   return (
     <>
-      <main className="product">
+      <main className={styles.product}>
         <ProductGrid item={item} onClick={openModalWindow} />
         <HowItWorks item={item.howItWorks} name={item.name} />
         <Usage item={item.usage} />

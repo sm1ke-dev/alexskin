@@ -1,18 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./MainAbout.css";
+import styles from "./MainAbout.module.scss";
 import about1 from "../../images/about1.png";
 import about2 from "../../images/about2.png";
 
 const MainAbout: React.FC = () => {
   return (
-    <section className="main-about">
-      <h2 className="main-about__title main-about__title_small-res">
+    <section className={styles.mainAbout}>
+      <h2
+        className={`${styles.mainAbout__title} ${styles.mainAbout__title_smallRes}`}
+      >
         О бренде
       </h2>
-      <div className="main-about__text-wrapper">
-        <h2 className="main-about__title">О бренде</h2>
-        <p className="main-about__subtitle">
+      <div className={styles.mainAbout__textWrapper}>
+        <h2 className={styles.mainAbout__title}>О бренде</h2>
+        <p className={styles.mainAbout__subtitle}>
           Я - Александра Варяникова, основательница бренда ALEXSKIN.
           <br />
           Но в первую очередь я - Женщина. И знаю, как важно не забывать об этой
@@ -24,16 +26,16 @@ const MainAbout: React.FC = () => {
           <br />
           Для себя. Для вас. Для каждой женщины.
         </p>
-        <Link to="/alexskin/about" className="main-about__link">
+        <Link to="/alexskin/about" className={styles.mainAbout__link}>
           История бренда
         </Link>
       </div>
-      <div className="main-about__pic-wrapper">
-        <div className="main-about__pic1-wrapper">
-          <img src={about1} alt="founder" className="main-about__pic" />
+      <div className={styles.mainAbout__picWrapper}>
+        <div className={styles.mainAbout__pic1Wrapper}>
+          <img src={about1} alt="founder" className={styles.mainAbout__pic} />
         </div>
-        <div className="main-about__pic2-wrapper">
-          <img src={about2} alt="founder" className="main-about__pic" />
+        <div className={styles.mainAbout__pic2Wrapper}>
+          <img src={about2} alt="founder" className={styles.mainAbout__pic} />
         </div>
       </div>
     </section>

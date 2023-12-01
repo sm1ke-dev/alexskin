@@ -1,0 +1,71 @@
+.mobileMenu {
+  visibility: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7f9;
+  top: 0;
+  left: -100vw;
+  transition: 0.5s;
+  z-index: 10;
+
+  &_opened {
+    visibility: visible;
+    z-index: 20;
+    left: 0;
+  }
+
+  &__button {
+    padding: 20px 7px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+  }
+
+  &__line1 {
+    display: block;
+    width: 27px;
+    height: 2px;
+    background-color: #323640;
+    position: absolute;
+    transform: rotate(-45deg);
+  }
+
+  &__line2 {
+    display: block;
+    width: 27px;
+    height: 2px;
+    background-color: #323640;
+    transform: rotate(45deg);
+  }
+
+  &__list {
+    margin-top: 45vw;
+    gap: 40px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__link {
+    color: #323640;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 480px) {
+    &__button {
+      left: 6px;
+      top: 10px;
+    }
+  }
+}

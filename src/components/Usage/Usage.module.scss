@@ -1,0 +1,150 @@
+.usage {
+  padding: 80px 50px;
+
+  &__wrapper_second {
+    margin-top: 100px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    margin-top: 75px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 8.46vw;
+  }
+
+  &__topArrow,
+  &__bottomArrow {
+    position: absolute;
+    left: 161px;
+  }
+
+  &__topArrow {
+    top: -18px;
+  }
+
+  &__bottomArrow {
+    bottom: -20px;
+  }
+
+  &__item {
+    position: relative;
+    flex: 0 0 370px;
+    display: flex;
+  }
+
+  &__picWrapper {
+    margin-right: 20px;
+    flex: 0 0 142px;
+    height: 142px;
+    position: relative;
+  }
+
+  &__face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  &__numWrapper {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -13px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__numVector {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__num {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-top: 28px;
+    flex: 0 0 208px;
+    color: #787f8b;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  @media screen and (max-width: 1269px) {
+    &__bottomArrow {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    padding: 8vw 30px;
+
+    &__wrapper_second {
+      margin-top: 10vw;
+    }
+
+    &__title {
+      font-size: 5.13vw;
+    }
+
+    &__list {
+      margin-top: 7.5vw;
+    }
+  }
+
+  @media screen and (max-width: 829px) {
+    &__topArrow {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 8vw 40px;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 35px 15px;
+
+    &__list {
+      margin-top: 33px;
+    }
+
+    &__item {
+      flex: 0 0 360px;
+      align-items: center;
+    }
+
+    &__text {
+      margin-top: 0;
+      flex: 0 0 197px;
+      font-size: 14px;
+      line-height: 120%;
+    }
+  }
+}

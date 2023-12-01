@@ -1,5 +1,5 @@
 import React from "react";
-import "./ImageModalWindow.css";
+import styles from "./ImageModalWindow.module.scss";
 import { useEscapeKey } from "../../hooks/useEscapeKey";
 import { useOutsideClick } from "../../hooks/useOutsideClick";
 
@@ -20,14 +20,14 @@ const ImageModalWindow: React.FC<ImageModalWindowProps> = ({
   useOutsideClick(onClose, ref);
 
   return (
-    <div className={`modal ${isOpen ? "modal_opened" : ""}`}>
-      <div className="modal__image-container" ref={ref}>
+    <div className={`${styles.modal} ${isOpen ? styles.modal_opened : ""}`}>
+      <div className={styles.modal__imageContainer} ref={ref}>
         <button
-          className="modal__close-button"
+          className={styles.modal__closeButton}
           aria-label="Закрытие попапа просмотра картинки"
           onClick={() => onClose(false)}
         ></button>
-        <img src={image} alt="Продукт" className="modal__image" />
+        <img src={image} alt="Продукт" className={styles.modal__image} />
       </div>
     </div>
   );

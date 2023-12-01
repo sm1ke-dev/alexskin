@@ -1,0 +1,179 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 270px;
+
+  &__image,
+  &__title {
+    opacity: 1;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 20px 0 8px;
+  }
+
+  &__image_hovered,
+  &__title_hovered {
+    opacity: 0.8;
+  }
+
+  &__description {
+    color: #787f8b;
+    font-size: 16px;
+    line-height: 22.4px;
+  }
+
+  &__priceWrapper {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__price,
+  &__oldPrice {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  &__price_tablet,
+  &__oldPrice_tablet {
+    display: none;
+  }
+
+  &__price {
+    color: #967444;
+
+    &_unavailable {
+      color: #969aa5;
+    }
+  }
+
+  &__oldPrice {
+    color: #969aa5;
+    text-decoration-line: line-through;
+    margin-right: auto;
+  }
+
+  &__iconWrapper {
+    width: 22px;
+    height: 22px;
+    padding: 7px;
+    margin: -7px;
+    opacity: 1;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__cartIcon {
+    object-fit: cover;
+  }
+
+  @media screen and (max-width: 1270px) {
+    &__title {
+      font-size: 1.575vw;
+      margin: 1.575vw 0 0.63vw;
+    }
+
+    &__description {
+      font-size: 1.26vw;
+      line-height: 1.764vw;
+    }
+
+    &__priceWrapper {
+      margin-top: 0.787vw;
+      gap: 0.787vw;
+    }
+
+    &__price,
+    &__oldPrice {
+      font-size: 1.575vw;
+    }
+  }
+
+  @media screen and (max-width: 1110px) {
+    &__description {
+      font-size: 14px;
+      line-height: 16.8px;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    &__price,
+    &__oldPrice {
+      font-size: 16px;
+    }
+
+    &__description {
+      height: 51px;
+    }
+  }
+
+  @media screen and (max-width: 890px) {
+    &__title {
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__image {
+      margin-bottom: 13px;
+    }
+
+    &__title {
+      margin: 10px 0 4px;
+    }
+
+    &__priceWrapper {
+      justify-content: flex-start;
+      gap: 15px;
+    }
+
+    &__price_desktop,
+    &__oldPrice_desktop {
+      display: none;
+    }
+
+    &__price_tablet,
+    &__oldPrice_tablet {
+      display: block;
+    }
+
+    &__iconWrapper {
+      margin: 0;
+      padding: 3px 10px 10px 0;
+    }
+
+    &__unavailable {
+      margin-top: 7px;
+    }
+  }
+
+  @media screen and (max-width: 728px) {
+    flex: 0 0 150px;
+
+    &__image {
+      height: 185px;
+    }
+
+    &__title {
+      font-size: 14px;
+    }
+  }
+}

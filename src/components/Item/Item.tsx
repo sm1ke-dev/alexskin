@@ -1,5 +1,5 @@
 import React from "react";
-import "./Item.css";
+import styles from "./Item.module.scss";
 import cart from "../../images/cart-icon.svg";
 import { useNavigate } from "react-router-dom";
 
@@ -31,57 +31,65 @@ const Item: React.FC<ItemProps> = ({
   };
 
   return (
-    <li className="item">
+    <li className={styles.item}>
       <img
         src={mainPic}
         alt="morningMasque"
-        className={`item__image ${isHovered && "item__image_hovered"}`}
+        className={`${styles.item__image} ${
+          isHovered && styles.item__image_hovered
+        }`}
         onMouseOver={() => setIsHovered(true)}
         onMouseOut={() => setIsHovered(false)}
         onClick={onClick}
       />
-      <div className="item__price-wrapper">
+      <div className={styles.item__priceWrapper}>
         <p
-          className={`item__price item__price_tablet ${
-            !isAvailable ? "item__price_unavailable" : ""
+          className={`${styles.item__price} ${styles.item__price_tablet} ${
+            !isAvailable ? styles.item__price_unavailable : ""
           }`}
         >
           {price} р.
         </p>
         {oldPrice !== 0 && (
-          <p className="item__old-price item__old-price_tablet">
+          <p
+            className={`${styles.item__oldPrice} ${styles.item__oldPrice_tablet}`}
+          >
             {oldPrice} р.
           </p>
         )}
       </div>
       <h3
-        className={`item__title ${isHovered && "item__title_hovered"}`}
+        className={`${styles.item__title} ${
+          isHovered && styles.item__title_hovered
+        }`}
         onMouseOver={() => setIsHovered(true)}
         onMouseOut={() => setIsHovered(false)}
         onClick={onClick}
       >
         {name}
       </h3>
-      <p className="item__description">{shortDescription}</p>
-      <div className="item__price-wrapper">
+      <p className={styles.item__description}>{shortDescription}</p>
+      <div className={styles.item__priceWrapper}>
         <p
-          className={`item__price item__price_desktop ${
-            !isAvailable ? "item__price_unavailable" : ""
+          className={`${styles.item__price} ${styles.item__price_desktop} ${
+            !isAvailable ? styles.item__price_unavailable : ""
           }`}
         >
           {price} р.
         </p>
         {oldPrice !== 0 && (
-          <p className="item__old-price item__old-price_desktop">
+          <p
+            className={`${styles.item__oldPrice} ${styles.item__oldPrice_desktop}`}
+          >
             {oldPrice} р.
           </p>
         )}
         {isAvailable ? (
-          <div className="item__icon-wrapper">
-            <img src={cart} alt="cart" className="item__cart-icon" />
+          <div className={styles.item__iconWrapper}>
+            <img src={cart} alt="cart" className={styles.item__cartIcon} />
           </div>
         ) : (
-          <p className="item__unavailable">Нет в наличии</p>
+          <p className={styles.item__unavailable}>Нет в наличии</p>
         )}
       </div>
     </li>

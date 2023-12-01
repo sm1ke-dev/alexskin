@@ -1,0 +1,126 @@
+.faq {
+  margin-top: 15px;
+
+  &__breadcrumbs {
+    padding: 0 50px;
+  }
+
+  &__title {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    max-width: 1170px;
+    margin: 40px auto 0;
+    padding: 0 50px;
+    list-style: none;
+  }
+
+  &__line {
+    height: 2px;
+    background-image: linear-gradient(
+      90deg,
+      #d7d7e0,
+      #d7d7e0 50%,
+      transparent 50%,
+      transparent 100%
+    );
+    background-size: 20px 1px;
+    border: none;
+  }
+
+  &__support {
+    max-width: 1170px;
+    margin: 40px auto 80px;
+    padding: 0 50px;
+  }
+
+  &__supportText {
+    max-width: 450px;
+    color: #787f8b;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  &__button {
+    margin-top: 20px;
+    display: block;
+    width: fit-content;
+    padding: 12px 18px;
+    background-color: #323640;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.2s;
+  }
+
+  &__button:hover {
+    opacity: 0.8;
+  }
+
+  @media screen and (max-width: 1000px) {
+    &__breadcrumbs {
+      padding: 0 30px;
+    }
+
+    &__title {
+      font-size: 5.13vw;
+    }
+
+    &__list {
+      margin-top: 4vw;
+      padding: 0 30px;
+    }
+
+    &__support {
+      padding: 0 30px;
+      margin-bottom: 8vw;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__breadcrumbs {
+      padding: 0 40px;
+    }
+
+    &__list {
+      padding: 0 40px;
+    }
+
+    &__support {
+      padding: 0 40px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    &__breadcrumbs {
+      padding: 0 15px;
+    }
+
+    &__list {
+      padding: 0 15px;
+    }
+
+    &__support {
+      margin: 25px 0 35px;
+      padding: 0 15px;
+    }
+
+    &__supportText {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.css";
+import styles from "./Header.module.scss";
 import burger from "../../images/burger-menu.svg";
 import logo from "../../images/logo.png";
 import search from "../../images/search-icon.svg";
@@ -16,64 +16,75 @@ const Header: React.FC = () => {
   return (
     <>
       <header
-        className={`header ${
-          window.location.pathname === "/alexskin/about" && "header_white"
+        className={`${styles.header} ${
+          window.location.pathname === "/alexskin/about" && styles.header_white
         }`}
       >
-        <div className="header__wrapper">
+        <div className={styles.header__wrapper}>
           <img
-            className="header__burger"
+            className={styles.header__burger}
             src={burger}
             alt="burger-menu"
             onClick={() => setIsMenuOpen(true)}
           />
           <img
-            className="header__logo"
+            className={styles.header__logo}
             src={logo}
             alt="Логотип"
             onClick={() => navigate("/alexskin/")}
           />
-          <ul className="menu-list">
-            <li className="menu-list__item">
-              <Link className="menu-list__link" to="/alexskin/about">
+          <ul className={styles.menuList}>
+            <li className={styles.menuList__item}>
+              <Link className={styles.menuList__link} to="/alexskin/about">
                 О бренде
               </Link>
             </li>
-            <li className="menu-list__item">
-              <Link className="menu-list__link" to="/alexskin/catalog">
+            <li className={styles.menuList__item}>
+              <Link className={styles.menuList__link} to="/alexskin/catalog">
                 Каталог
               </Link>
             </li>
-            <li className="menu-list__item">
-              <Link className="menu-list__link" to="/alexskin/community">
+            <li className={styles.menuList__item}>
+              <Link className={styles.menuList__link} to="/alexskin/community">
                 Коммьюнити
               </Link>
             </li>
-            <li className="menu-list__item">
-              <Link className="menu-list__link" to="/alexskin/service">
+            <li className={styles.menuList__item}>
+              <Link className={styles.menuList__link} to="/alexskin/service">
                 Сервис
               </Link>
             </li>
-            <li className="menu-list__item">
-              <Link className="menu-list__link" to="/alexskin/faq">
+            <li className={styles.menuList__item}>
+              <Link className={styles.menuList__link} to="/alexskin/faq">
                 FAQ
               </Link>
             </li>
-            <li className="menu-list__item">
-              <Link className="menu-list__link" to="/alexskin/partnership">
+            <li className={styles.menuList__item}>
+              <Link
+                className={styles.menuList__link}
+                to="/alexskin/partnership"
+              >
                 Сотрудничество
               </Link>
             </li>
           </ul>
-          <ul className="icons-list">
-            <li className="icons-list__item">
-              <img className="icons-list__icon" src={search} alt="search" />
+          <ul className={styles.iconsList}>
+            <li className={styles.iconsList__item}>
+              <img
+                className={styles.iconsList__icon}
+                src={search}
+                alt="search"
+              />
             </li>
-            <li className="icons-list__item">
-              <img className="icons-list__icon" src={cart} alt="cart" />
+            <li className={styles.iconsList__item}>
+              <img className={styles.iconsList__icon} src={cart} alt="cart" />
             </li>
-            <li className="icons-list__item">
-              <img className="icons-list__icon" src={account} alt="account" />
+            <li className={styles.iconsList__item}>
+              <img
+                className={styles.iconsList__icon}
+                src={account}
+                alt="account"
+              />
             </li>
           </ul>
         </div>

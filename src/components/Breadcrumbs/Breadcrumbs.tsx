@@ -1,18 +1,17 @@
 import React from "react";
-import "./Breadcrumbs.css";
+import styles from "./Breadcrumbs.module.scss";
 import { Link } from "react-router-dom";
 type BreadcrumbsProps = {
   page: string;
-  urlPath?: string;
 };
 
-const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ page, urlPath }) => {
+const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ page }) => {
   return (
-    <p className={`breadcrumbs ${urlPath && `${urlPath}__breadcrumbs`}`}>
-      <Link to="/alexskin/" className="breadcrumbs__link">
+    <p className={styles.breadcrumbs}>
+      <Link to="/alexskin/" className={styles.breadcrumbs__link}>
         Главная
       </Link>
-      <span className="breadcrumbs__slash"> /</span>
+      <span className={styles.breadcrumbs__slash}> /</span>
       {` ${page}`}
     </p>
   );

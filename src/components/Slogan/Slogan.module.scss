@@ -1,0 +1,54 @@
+.slogan {
+  margin-top: 50px;
+  margin-bottom: 80px;
+
+  &__title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 52px;
+  }
+
+  &__gridWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1440px) {
+    margin-top: 3.473vw;
+    margin-bottom: 5.56vw;
+
+    &__title {
+      font-size: 3.473vw;
+      margin-bottom: 3.61vw;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__title {
+      text-transform: none;
+    }
+  }
+
+  @media screen and (max-width: 580px) {
+    margin-bottom: 35px;
+
+    &__title {
+      font-size: 20px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    margin-top: 20px;
+
+    &__title {
+      margin-bottom: 20px;
+    }
+  }
+}

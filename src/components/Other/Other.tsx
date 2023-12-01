@@ -1,11 +1,11 @@
 import React from "react";
 import MainCatalog from "../MainCatalog/MainCatalog";
-import "./Other.css";
+import styles from "./Other.module.scss";
 
 const Other: React.FC = () => {
   return (
-    <section className="other">
-      <MainCatalog page="product" title="Другие продукты" />
+    <section className={styles.other}>
+      <MainCatalog title="Другие продукты" />
     </section>
   );
 };

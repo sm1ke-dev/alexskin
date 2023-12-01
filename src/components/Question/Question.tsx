@@ -1,5 +1,5 @@
 import React from "react";
-import "./Question.css";
+import styles from "./Question.module.scss";
 import Answer from "../Answer/Answer";
 import { QuestionType } from "../../utils/constants/yourMask";
 type QuestionProps = QuestionType & {
@@ -56,13 +56,13 @@ const Question: React.FC<QuestionProps> = ({
   };
 
   return (
-    <div className="question">
-      <h4 className="question__name">
+    <div className={styles.question}>
+      <h4 className={styles.question__name}>
         {id} {name}
       </h4>
       <ul
-        className={`question__answers-list ${
-          answers.length > 5 && "question__answers-list_big"
+        className={`${styles.question__answersList} ${
+          answers.length > 5 && styles.question__answersList_big
         }`}
       >
         {answers.map((answer) => (
@@ -76,10 +76,10 @@ const Question: React.FC<QuestionProps> = ({
           />
         ))}
       </ul>
-      <div className="question__pagination">
+      <div className={styles.question__pagination}>
         <button
-          className={`question__arrow ${
-            questionNumber === 1 ? "question__arrow_disabled" : ""
+          className={`${styles.question__arrow} ${
+            questionNumber === 1 ? styles.question__arrow_disabled : ""
           }`}
           onClick={prevQuestion}
           disabled={questionNumber === 1}
@@ -103,13 +103,13 @@ const Question: React.FC<QuestionProps> = ({
             />
           </svg>
         </button>
-        <p className="question__number">
+        <p className={styles.question__number}>
           {id} / {length < 10 ? `0${length}` : length}
         </p>
         <button
-          className={`question__arrow ${
+          className={`${styles.question__arrow} ${
             questionNumber === length || answersObj[id] === ""
-              ? "question__arrow_disabled"
+              ? styles.question__arrow_disabled
               : ""
           }`}
           onClick={() => nextQuestion()}

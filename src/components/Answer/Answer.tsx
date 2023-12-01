@@ -1,5 +1,5 @@
 import React from "react";
-import "./Answer.css";
+import styles from "./Answer.module.scss";
 import { AnswerType } from "../../utils/constants/yourMask";
 type AnswerProps = AnswerType & {
   isQuestionChanged: boolean;
@@ -32,27 +32,35 @@ const Answer: React.FC<AnswerProps> = ({
   };
 
   return (
-    <li className={`answer ${isQuestionChanged ? "answer_faded" : ""}`}>
+    <li
+      className={`${styles.answer} ${
+        isQuestionChanged ? styles.answer_faded : ""
+      }`}
+    >
       <div
-        className="answer__circles-wrapper"
+        className={styles.answer__circlesWrapper}
         onClick={onClick}
         onMouseOver={() => setIsHovered(true)}
         onMouseOut={() => setIsHovered(false)}
       >
-        <div className="answer__circle">
-          <img src={pic} alt="background" className="answer__background" />
+        <div className={styles.answer__circle}>
+          <img
+            src={pic}
+            alt="background"
+            className={styles.answer__background}
+          />
         </div>
         <div
-          className={`answer__checkbox ${
-            isHovered ? "answer__checkbox_hovered" : ""
+          className={`${styles.answer__checkbox} ${
+            isHovered ? styles.answer__checkbox_hovered : ""
           }`}
         >
           {(isClicked || answersObj[questionId] === id) && (
-            <div className="answer__point"></div>
+            <div className={styles.answer__point}></div>
           )}
         </div>
       </div>
-      <p className="answer__name">{text}</p>
+      <p className={styles.answer__name}>{text}</p>
     </li>
   );
 };

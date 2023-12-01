@@ -1,5 +1,5 @@
 import React from "react";
-import "./Catalog.css";
+import styles from "./Catalog.module.scss";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import MainCatalog from "../../components/MainCatalog/MainCatalog";
 import Discount from "../../components/Discount/Discount";
@@ -11,9 +11,13 @@ const Catalog: React.FC = () => {
   }, []);
 
   return (
-    <main className="catalog">
-      <Breadcrumbs page="Каталог" urlPath="catalog" />
-      <MainCatalog page="catalog" />
+    <main className={styles.catalog}>
+      <div className={styles.catalog__breadcrumbs}>
+        <Breadcrumbs page="Каталог" />
+      </div>
+      <div className={styles.catalog__catalogList}>
+        <MainCatalog />
+      </div>
       <Discount />
       <Expert />
     </main>

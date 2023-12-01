@@ -1,6 +1,6 @@
 import React from "react";
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
-import "./ProductGrid.css";
+import styles from "./ProductGrid.module.scss";
 import fullscreenIcon from "../../images/fullscreen-icon.svg";
 import checkMark from "../../images/check-mark.svg";
 import { itemsType } from "../../utils/constants/items";
@@ -20,17 +20,17 @@ const ProductGrid: React.FC<ProductGridProps> = ({ item, onClick }) => {
   }, [window.location.pathname]);
 
   return (
-    <div className="product-grid">
-      <div className="product-grid__pics-wrapper">
+    <div className={styles.productGrid}>
+      <div className={styles.productGrid__picsWrapper}>
         <button
-          className={`product-grid__arrow-button product-grid__arrow-button_up ${
-            picIndex === 0 ? "product-grid__arrow-button_disabled" : ""
-          }`}
+          className={`${styles.productGrid__arrowButton} ${
+            styles.productGrid__arrowButton_up
+          } ${picIndex === 0 ? styles.productGrid__arrowButton_disabled : ""}`}
           disabled={picIndex === 0}
           onClick={() => setPicIndex(picIndex - 1)}
         >
           <svg
-            className="product-grid__arrow"
+            className={styles.productGrid__arrow}
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="10"
@@ -48,9 +48,9 @@ const ProductGrid: React.FC<ProductGridProps> = ({ item, onClick }) => {
         {item.productPics.map((pic) => (
           <div
             key={item.productPics.indexOf(pic)}
-            className={`product-grid__pic ${
+            className={`${styles.productGrid__pic} ${
               item.productPics.indexOf(pic) === picIndex
-                ? "product-grid__pic_selected"
+                ? styles.productGrid__pic_selected
                 : ""
             }`}
             onClick={() => setPicIndex(item.productPics.indexOf(pic))}
@@ -58,21 +58,23 @@ const ProductGrid: React.FC<ProductGridProps> = ({ item, onClick }) => {
             <img
               src={pic}
               alt="main picture"
-              className="product-grid__main-pic"
+              className={styles.productGrid__mainPic}
             />
           </div>
         ))}
         <button
-          className={`product-grid__arrow-button product-grid__arrow-button_down ${
+          className={`${styles.productGrid__arrowButton} ${
+            styles.productGrid__arrowButton_down
+          } ${
             picIndex === item.productPics.length - 1
-              ? "product-grid__arrow-button_disabled"
+              ? styles.productGrid__arrowButton_disabled
               : ""
           }`}
           disabled={picIndex === item.productPics.length - 1}
           onClick={() => setPicIndex(picIndex + 1)}
         >
           <svg
-            className="product-grid__arrow"
+            className={styles.productGrid__arrow}
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="10"
@@ -90,21 +92,21 @@ const ProductGrid: React.FC<ProductGridProps> = ({ item, onClick }) => {
           </svg>
         </button>
       </div>
-      <div className="product-grid__main-wrapper">
+      <div className={styles.productGrid__mainWrapper}>
         <img
           src={item.productPics[picIndex]}
           alt="main picture"
-          className="product-grid__main-pic"
+          className={styles.productGrid__mainPic}
         />
         <button
-          className={`product-grid__arrow-button product-grid__arrow-button_left ${
-            picIndex === 0 ? "product-grid__arrow-button_disabled" : ""
-          }`}
+          className={`${styles.productGrid__arrowButton} ${
+            styles.productGrid__arrowButton_left
+          } ${picIndex === 0 ? styles.productGrid__arrowButton_disabled : ""}`}
           disabled={picIndex === 0}
           onClick={() => setPicIndex(picIndex - 1)}
         >
           <svg
-            className="product-grid__arrow"
+            className={styles.productGrid__arrow}
             xmlns="http://www.w3.org/2000/svg"
             width="10"
             height="16"
@@ -120,16 +122,18 @@ const ProductGrid: React.FC<ProductGridProps> = ({ item, onClick }) => {
           </svg>
         </button>
         <button
-          className={`product-grid__arrow-button product-grid__arrow-button_right ${
+          className={`${styles.productGrid__arrowButton} ${
+            styles.productGrid__arrowButton_right
+          } ${
             picIndex === item.productPics.length - 1
-              ? "product-grid__arrow-button_disabled"
+              ? styles.productGrid__arrowButton_disabled
               : ""
           }`}
           disabled={picIndex === item.productPics.length - 1}
           onClick={() => setPicIndex(picIndex + 1)}
         >
           <svg
-            className="product-grid__arrow"
+            className={styles.productGrid__arrow}
             xmlns="http://www.w3.org/2000/svg"
             width="10"
             height="16"
@@ -147,86 +151,86 @@ const ProductGrid: React.FC<ProductGridProps> = ({ item, onClick }) => {
           </svg>
         </button>
         <button
-          className="product-grid__pic-button"
+          className={styles.productGrid__picButton}
           onClick={() => onClick(item.productPics[picIndex])}
         >
           <img
             src={fullscreenIcon}
             alt="fullscreenIcon"
-            className="product-grid__fullscreen-icon"
+            className={styles.productGrid__fullscreenIcon}
           />
         </button>
       </div>
-      <div className="product-grid__description-wrapper">
+      <div className={styles.productGrid__descriptionWrapper}>
         <Breadcrumbs page={item.name} />
-        <h2 className="product-grid__title">{item.name}</h2>
-        <div className="product-grid__price-wrapper">
+        <h2 className={styles.productGrid__title}>{item.name}</h2>
+        <div className={styles.productGrid__priceWrapper}>
           <p
-            className={`product-grid__price ${
-              !item.isAvailable ? "product-grid__price_unavailable" : ""
+            className={`${styles.productGrid__price} ${
+              !item.isAvailable ? styles.productGrid__price_unavailable : ""
             }`}
           >
             {item.price} р.
           </p>
           {item.oldPrice !== 0 && (
-            <p className="product-grid__old-price">{item.oldPrice} р.</p>
+            <p className={styles.productGrid__oldPrice}>{item.oldPrice} р.</p>
           )}
           {!item.isAvailable && (
-            <p className="product-grid__unavailable">Нет в наличии</p>
+            <p className={styles.productGrid__unavailable}>Нет в наличии</p>
           )}
         </div>
-        <hr className="product-grid__line" />
+        <hr className={styles.productGrid__line} />
         <p
-          className="product-grid__text"
+          className={styles.productGrid__text}
           dangerouslySetInnerHTML={{ __html: item.description }}
         ></p>
         {item.isAvailable ? (
           <>
-            <div className="product-grid__counter">
+            <div className={styles.productGrid__counter}>
               <button
                 onClick={() => setCount(count - 1)}
-                className="product-grid__minus"
+                className={styles.productGrid__minus}
                 disabled={count === 0}
               >
                 -
               </button>
-              <div className="product-grid__number-wrapper">
-                <p className="product-grid__number">{count}</p>
+              <div className={styles.productGrid__numberWrapper}>
+                <p className={styles.productGrid__number}>{count}</p>
               </div>
               <button
                 onClick={() => setCount(count + 1)}
-                className="product-grid__plus"
+                className={styles.productGrid__plus}
                 disabled={count === 9}
               >
                 +
               </button>
             </div>
-            <button className="product-grid__button">В корзину</button>
+            <button className={styles.productGrid__button}>В корзину</button>
           </>
         ) : (
           <>
-            <hr className="product-grid__unavailable-line" />
-            <p className="product-grid__unavailable-text">
+            <hr className={styles.productGrid__unavailableLine} />
+            <p className={styles.productGrid__unavailableText}>
               Продукт полностью распродан!
               <br />
               <br />
               Оставьте свой e-mail и сайт AlexSkin уведомит вас о поступлении
               товара
             </p>
-            <form action="" className="product-grid__form">
+            <form action="" className={styles.productGrid__form}>
               <input
                 type="text"
-                className="product-grid__input"
+                className={styles.productGrid__input}
                 placeholder="Ваш e-mail"
               />
               <button
                 type="submit"
-                className="product-grid__button product-grid__button_submit"
+                className={`${styles.productGrid__button} ${styles.productGrid__button_submit}`}
               >
                 Сообщить о поступлении
               </button>
             </form>
-            <div className="product-grid__checkbox-wrapper">
+            <div className={styles.productGrid__checkboxWrapper}>
               <div
                 className={`product-grid__checkbox ${
                   isChecked ? "product-grid__checkbox_checked" : ""
@@ -235,9 +239,9 @@ const ProductGrid: React.FC<ProductGridProps> = ({ item, onClick }) => {
               >
                 {isChecked && <img src={checkMark} alt="checkMark" />}
               </div>
-              <p className="product-grid__unavailable-text">
+              <p className={styles.productGrid__unavailableText}>
                 Согласен(на) с{" "}
-                <span className="product-grid__link">
+                <span className={styles.productGrid__link}>
                   политикой конфиденциальности
                 </span>
               </p>

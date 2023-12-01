@@ -1,5 +1,5 @@
 import React from "react";
-import "./FaqQuestion.css";
+import styles from "./FaqQuestion.module.scss";
 import { questionType } from "../../utils/constants/questions";
 
 const FaqQuestion: React.FC<questionType> = ({ id, name, text }) => {
@@ -7,27 +7,30 @@ const FaqQuestion: React.FC<questionType> = ({ id, name, text }) => {
 
   return (
     <>
-      <li className="faq-question" onClick={() => setIsClicked(!isClicked)}>
-        <div className="faq-question__wrapper">
-          <h3 className="faq-question__name">{name}</h3>
+      <li
+        className={styles.faqQuestion}
+        onClick={() => setIsClicked(!isClicked)}
+      >
+        <div className={styles.faqQuestion__wrapper}>
+          <h3 className={styles.faqQuestion__name}>{name}</h3>
           <button
-            className={`faq-question__button ${
-              isClicked && "faq-question__button_clicked"
+            className={`${styles.faqQuestion__button} ${
+              isClicked && styles.faqQuestion__button_clicked
             }`}
           >
-            <span className="line1"></span>
-            <span className="line2"></span>
+            <span className={styles.line1}></span>
+            <span className={styles.line2}></span>
           </button>
         </div>
         <div
-          className={`faq-question__answer-wrapper ${
-            isClicked && "faq-question__answer-wrapper_opened"
+          className={`${styles.faqQuestion__answerWrapper} ${
+            isClicked && styles.faqQuestion__answerWrapper_opened
           }`}
         >
-          <p className="faq-question__answer">{text}</p>
+          <p className={styles.faqQuestion__answer}>{text}</p>
         </div>
       </li>
-      <hr className="faq__line" />
+      <hr className={styles.line3} />
     </>
   );
 };
