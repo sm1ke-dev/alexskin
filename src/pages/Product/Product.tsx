@@ -1,14 +1,14 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Composition from "../Composition/Composition";
-import HowItWorks from "../HowItWorks/HowItWorks";
-import Ingredients from "../Ingredients/Ingredients";
-import Other from "../Other/Other";
-import ProductGrid from "../ProductGrid/ProductGrid";
-import Usage from "../Usage/Usage";
+import Composition from "../../components/Composition/Composition";
+import HowItWorks from "../../components/HowItWorks/HowItWorks";
+import Ingredients from "../../components/Ingredients/Ingredients";
+import Other from "../../components/Other/Other";
+import ProductGrid from "../../components/ProductGrid/ProductGrid";
+import Usage from "../../components/Usage/Usage";
 import { items } from "../../utils/constants/items";
 import "./Product.css";
-import ImageModalWindow from "../ImageModalWindow/ImageModalWindow";
+import ImageModalWindow from "../../components/ImageModalWindow/ImageModalWindow";
 
 const Product: React.FC = () => {
   const { itemUrl } = useParams();

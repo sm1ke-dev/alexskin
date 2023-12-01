@@ -1,7 +1,7 @@
 import React from "react";
-import AboutGrid from "../AboutGrid/AboutGrid";
-import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
-import Video from "../Video/Video";
+import AboutGrid from "../../components/AboutGrid/AboutGrid";
+import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
+import Video from "../../components/Video/Video";
 import "./About.css";
 
 const About: React.FC = () => {

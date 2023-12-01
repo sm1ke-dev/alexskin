@@ -1,5 +1,5 @@
 import React from "react";
-import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
+import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import "./Documents.css";
 import doc from "../../images/document.png";
 

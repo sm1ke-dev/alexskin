@@ -1,9 +1,9 @@
 import React from "react";
 import "./Catalog.css";
-import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
-import MainCatalog from "../MainCatalog/MainCatalog";
-import Discount from "../Discount/Discount";
-import Expert from "../Expert/Expert";
+import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
+import MainCatalog from "../../components/MainCatalog/MainCatalog";
+import Discount from "../../components/Discount/Discount";
+import Expert from "../../components/Expert/Expert";
 
 const Catalog: React.FC = () => {
   React.useEffect(() => {

@@ -1,5 +1,5 @@
 import React from "react";
-import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
+import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import "./Community.css";
 import features from "../../images/features.png";
 import phones from "../../images/phones.png";

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Faq.css";
-import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
-import FaqQuestion from "../FaqQuestion/FaqQuestion";
+import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
+import FaqQuestion from "../../components/FaqQuestion/FaqQuestion";
 import { questions } from "../../utils/constants/questions";
 
 const Faq: React.FC = () => {

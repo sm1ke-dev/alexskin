@@ -1,6 +1,6 @@
 import React from "react";
 import "./Service.css";
-import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
+import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import { useNavigate } from "react-router-dom";
 
 const Service: React.FC = () => {

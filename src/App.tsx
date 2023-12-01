@@ -1,18 +1,18 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import Main from "../Main/Main";
-import About from "../About/About";
-import Catalog from "../Catalog/Catalog";
-import Community from "../Community/Community";
-import Service from "../Service/Service";
-import Faq from "../Faq/Faq";
-import Partnership from "../Partnership/Partnership";
-import Documents from "../Documents/Documents";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
-import Product from "../Product/Product";
-import NotFound from "../NotFound/NotFound";
+import Main from "./pages/Main/Main";
+import About from "./pages/About/About";
+import Catalog from "./pages/Catalog/Catalog";
+import Community from "./pages/Community/Community";
+import Service from "./pages/Service/Service";
+import Faq from "./pages/Faq/Faq";
+import Partnership from "./pages/Partnership/Partnership";
+import Documents from "./pages/Documents/Documents";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Product from "./pages/Product/Product";
+import NotFound from "./pages/NotFound/NotFound";
 
 const App: React.FC = () => {
   return (
